@@ -53,6 +53,22 @@ body {
     width: 100%;
 }
 
+.navbar .dropdown-menu {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown-item {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--light-bg);
+    color: var(--secondary-color);
+}
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
