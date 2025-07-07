@@ -5,6 +5,7 @@ url: "https://riedde.github.io/personal-website"
 
 markdown: kramdown
 highlighter: rouge
+show_page_titles: true
 
 exclude:
   - Gemfile
