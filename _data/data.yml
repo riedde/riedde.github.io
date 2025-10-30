@@ -9,13 +9,13 @@ sidebar:
 
   # Profile information
   name: Dennis Ried
-  tagline: Juniorprofessor
+  tagline: Juniorprofessor für Musikwissenschaft
   avatar: profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
   email: forschung@dennisried.de
   phone:
-  timezone: Europe/Berlin # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
+  timezone: Europa/Frankfurt # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship:
   website: https://dennisried.de/ # Include the full website URL, including "http://" or "https://".
   linkedin: dennis-ried-a75814148
@@ -46,16 +46,19 @@ sidebar:
   interests:
     title: Interessen
     info:
-    - item: Singen
+    - item: Musik hören
       link:
 
-    - item: Programmieren
+    - item: Musik machen
+      link:
+    
+    - item: Musik fördern
       link:
 
 career-profile:
   title: Profil
   summary: |
-    Digitale Forschungsdaten mit großer Erschließungstiefe und von hoher Qualität helfen uns, über die Grenzen der eigenen Forschungsfrage hinaus, valide Ergebnisse zu erzielen. Deshalb unterstütze ich den Aufbau von Datenbeständen und die Diskurse der Fachbereiche Digitalen Musikwissenschaft und Digital Humanities.
+    **Digitale Forschungsdaten** mit großer Erschließungstiefe und von *hoher Qualität* helfen uns, über die Grenzen der eigenen Forschungsfrage hinaus, valide Ergebnisse zu erzielen. Deshalb unterstütze ich den Aufbau von Datenbeständen und die Diskurse der Fachbereiche Digitalen Musikwissenschaft und Digital Humanities.
     
     Durch den Einsatz wissenschaftlicher Expertise und technischer Fähigkeiten lassen sich Projekte wie das Online-Portal des Joachim-Raff-Archivs (JRA) und Baumann-Digital (BauDi) realisieren. In beiden Fällen handelt es sich um Projekte, in denen ein solides Datenmanagement, offene Kommunikation, wissenschaftliche Sorgfalt und anwendungsspezifische technische Lösungen die Qualität und Präsentation der Forschungnsdaten sicher stellen. Nur in Kombination können all diese Aspekte zu einem zeitgemäßen und wertvollen Ergebnis führen.
 
@@ -151,10 +154,10 @@ skills:
 commitment:
   title: Engagement
   info:
-    - company: Music Encoding Initiative (MEI) | Metadata and Cataloging Interest Group
+    - company: Metadata and Cataloging Interest Group
       role: Administrative Co-chair
       details: |
-        Leitung der internationalen AG.
+        Internationale AG der Music Encoding Initiative (MEI)
     
     - company: Joachim-Raff-Archiv Lachen/SZ (CH)
       role: Wissenschaftlicher Beirat
@@ -166,25 +169,25 @@ commitment:
       details: |
         Forschungsverbund für digitale Musikwissenschaft am Musikwissenschaftlichen Seminar Detmold/Paderborn.
     
-    - company: Dommusik-Förderverein Speyer e. V.
-      role: Schatzmeister
+    - company: Fachgruppe Digitale Musikwissenschaft (DigMus)
+      role: Sprecher
       details: |
-        Verwaltung der Vereinsfinanzen und Unterstützung der Dommusik.
+        Fachgruppe der Gesellschaft für Musikforschung (GfM)
     
-    - company: Gesellschaft für Musikforschung (GfM)
+    - company: Georg-Friedrich-Händel-Gesellschaft e. V.
       role: Mitglied
       details: |
-        Sprecher der Fachgruppe Digitale Musikwissenschaft (DigMus) und Mitglied der Fachgruppe Freie Forschungsinstitute (FFFI).
+        Aufbau einer Infrastruktur für die digitale Händel-Forschung.
     
     - company: Arbeitsgemeinschaft für germanistische Edition (AGE)
       role: Mitglied
       details: |
         Engagement in der wissenschaftlichen Gemeinschaft für Editionswissenschaft.
     
-    - company: Georg-Friedrich-Händel-Gesellschaft e. V.
-      role: Mitglied
+    - company: Dommusik-Förderverein Speyer e. V.
+      role: Schatzmeister
       details: |
-        Unterstützung der Händel-Forschung.
+        Verwaltung der Vereinsfinanzen und Unterstützung der Dommusik.
 
 experiences:
   title: Berufserfahrung
@@ -203,8 +206,7 @@ experiences:
     time: Mai 2018–Aug. 2021
     company: Max-Reger-Institut Karlsruhe
     details: |
-      Mitarbeiter und sei 2019 Editor im Akademieprojekt "Reger-Werkausgabe".
-      Edition von Werken Max Regers, Struktureller Aufbau der Editionstools (Edirom), Forschungsdatenmanagement (Bestandsvalidierung, XML-Schemata und Dokumentation), Unterstützung in der Entwicklung und Programmierung neuer Features für das Max-Reger-Portal (MRP) und die RWA online
+      Mitarbeiter und sei 2019 Editor im Akademieprojekt "Reger-Werkausgabe". Edition von Werken Max Regers, Struktureller Aufbau der Editionstools (Edirom), Forschungsdatenmanagement (Bestandsvalidierung, XML-Schemata und Dokumentation), Unterstützung in der Entwicklung und Programmierung neuer Features für das Max-Reger-Portal (MRP) und die RWA online
   - role: Gesellschafter
     time: Sep. 2015–Dez. 2020
     company: Edition Lilienteich, Karlsruhe
@@ -215,7 +217,7 @@ experiences:
 projects:
   title: Projekte
   intro: >
-    You can list your side projects in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+    Projekte, an denen ich mitwirk(t)e.
   assignments:
   - title: Hallische Händel-Ausgabe
     link: "#"
@@ -265,34 +267,22 @@ oss:
 publications:
   title: Publikationen
   intro: |
-    You can list your publications in this section. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-    bibendum fringilla a eu lectus.
+    Eine Liste der Publikationen wird zeitnah bereitgestellt.
   papers:
-  - title: The Art of Computer Programming
+  - title: Titel
+    authors: Dennis Ried
+    doi:
     link: "#"
-    authors: Donald E. Knuth
-    conference: Addison-Wesley, 1968
-
-  - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-    link: "#"
-    authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-    conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-  - title: A syntax directed compiler for Algol 60
-    link: "#"
-    authors: Edgar T. Irons
-    conference: "Comm. ACM 4 (1961), 51–55"
 
 conferences:
   title: Konferenzen
   intro: |
-    Konferenzen und Beiträge
+    Eine Liste der Konferenzen wird zeitnah bereitgestellt.
   events:
   - name: 13. Filmmusiktage
     place: Halle(Saale)
-    time: 9. Nov. 2025
-    details: Podiumsdiskussion
+    time: 7.–8. Nov. 2025
+    details: Diskutant in der Podiumsdiskussion
 
 footer: >
   Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
