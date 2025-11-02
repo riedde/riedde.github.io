@@ -1,0 +1,260 @@
+title: Publikationen
+intro: |
+  Liste derzeit noch nicht vollständig. Ziel: Meine gesamte Publikationsliste. Die Vorschau zeigt die fünf zuletzt erschienenen Titel.
+papers:
+- title: "[Chapter] 3 Metadata in MEI"
+  editors: "Dennis Ried / Clemens Gubsch"
+  publication:
+    title: "MEI Guidelines 5.1"
+    editors: "Johannes Kepper / Perry Roland"
+    year: 2025
+  type: in-book
+
+- title: "Hans Werner Henzes künstlerisches Netzwerk"
+  authors: "Antje Tumat / Elena Minetti / Dennis Ried / Irmlind Capelle"
+  publication:
+    title: "Musik, Netzwerke, Selbstzeugnisse. Aktuelle Forschung zu Hans Werner Henze"
+    editors: "Antje Tumat / Elena Minetti / Dennis Ried / Irmlind Capelle"
+    year: 2025
+  doi: "10.25366/2025.157"
+  type: article
+
+- title: "Musik, Netzwerke, Selbstzeugnisse. Aktuelle Forschung zu Hans Werner Henze"
+  editors: "Antje Tumat / Elena Minetti / Dennis Ried / Irmlind Capelle"
+  publication:
+    year: 2025
+  doi: "10.25366/2025.156"
+  type: book
+
+- title: "Nur ein Satz. Gedanken zur Edition von Telegrammen"
+  authors: "Dennis Ried"
+  publication:
+    title: "»Und alle Sphären klingen«. Musikgeschichtliche Entdeckungen und Reflexionen"
+    editors: "Ulrike Harnisch / Annette Landgraf / Tomi Mäkelä / Ute Poetzsch / Teresa Ramer-Wünsche"
+    place: Kassel
+    year: 2025
+  type: article
+
+- title: "»Epitexte« in der Reger-Werkausgabe"
+  authors: "Dennis Ried"
+  publication:
+    title: "Werk und Beiwerk. Zur Edition von Paratexten (Beihefte zu editio)"
+    editors: "Jan Hess / Roland S. Kamzelak(†)"
+    place: Berlin
+    year: 2024
+  link: "https://www.degruyter.com/document/isbn/9783110703580/html"
+  type: article
+
+- title: "Die Werkdatensätze von Henze-Digital als Ansätze für ein digitales Werkverzeichnis"
+  authors: "Dennis Ried"
+  publication:
+    title: "DIE TONKUNST. Thema: Digitale Werkverzeichnisse"
+    editors: "DIE TONKUNST"
+    issue: 1
+    pages: "50–58"
+    year: 2024
+  type: article
+
+- title: "Synergieeffekte zwischen Henze-Digital und der Carl Maria von Weber-Gesamtausgabe durch die bilaterale Weiterentwicklung der WeGA-WebApp"
+  authors: "Dennis Ried"
+  publication:
+    title: "Digital Humanities im deutschsprachigen Raum 2024"
+    editors: "Joëlle Weis / Estelle Bunout / Thomas Haider / Patrick Helling"
+    year: 2024
+  link: "https://zenodo.org/doi/10.5281/zenodo.10698272"
+  doi: "10.5281/zenodo.10698272"
+  type: article
+
+- title: "»Viel Geschrei und Nerderei« – der etwas andere Tagungsbericht vom 1. Harsh-Vocal-Camp"
+  authors: "Dennis Ried"
+  publication:
+    title: "kontrovers. Debatten zur Musikwissenschaft"
+    editors: "Sebastian Bolz / Moritz Kelber"
+    year: 2024
+  type: article
+
+- title: "»Play it again, Sam« – Levels of Complexity in Encoding Performance Personnel"
+  authors: "Benjamin W. Bohl / Dennis Ried"
+  publication:
+    title: "Music Encoding Conference Proceedings 2022. May 19-22, 2022 Dalhousie University (Halifax, Nova Scotia, Canada)"
+    editors: "David M. Weigl"
+    year: 2023
+    publisher: Humanities Commons
+  link: "https://doi.org/10.17613/xn3g-vs35"
+  type: article
+
+- title: "Ludwig Baumann"
+  authors: "Dennis Ried"
+  publication:
+    title: "Blick in die Geschichte. Karlsruher Stadthistorische Beiträge"
+    editors: "Stadt Karlsruhe"
+    issue: 140
+    pages: "1"
+    year: 2023
+  link: "https://stadtgeschichte.karlsruhe.de/stadtarchiv/blick-in-die-geschichte/ausgaben/blick-140"
+  type: article
+
+- title: "METAdata and metaDATA"
+  authors: "Clemens Gubsch / Dennis Ried"
+  publication:
+    title: "Music Encoding Conference Proceedings 2021. 19–22 July, 2021 University of Alicante (Spain)"
+    editors: "Stefan Münnich / David Rizo"
+    year: 2022
+    publisher: Humanities Commons
+  link: "https://doi.org/10.17613/fc1c-mx52"
+  type: article
+
+- title: "Weltweite Verfügbarkeit und digitale Langzeitarchivierung. Die Mitteilungen der IMRG bei musiconn.publish"
+  authors: "Dennis Ried"
+  publication:
+    title: "Mitteilungen"
+    editors: "Almut Ochsmann im Auftrag der Internationalen Max-Reger-Gesellschaft"
+    issue: 39
+    pages: "36"
+    year: 2021
+    place: Karlsruhe
+  link: "https://journals.qucosa.de/mimrg/article/view/3199"
+  type: article
+
+- title: "Der Liebe will ich singen. Hermann Reutters Begegnung mit dem Mittelalter"
+  authors: "Dennis Ried"
+  publication:
+    title: "Ritter, Tod und Teufel. Hermann Reutter und das Lied"
+    editors: "Matthias Wiegandt"
+    pages: "155–176"
+    year: 2021
+    place: Würzburg
+  type: article
+
+- title: "Musikalische Schrift und Digitalität. Ein Werkstattbericht"
+  authors: "Julia Freund / Stefan Münnich / Dennis Ried / Michelle Ziegler"
+  publication:
+    title: "kontrovers"
+    year: 2021
+  link: "https://web.archive.org/web/20240421080509/https://kontrovers.hypotheses.org/1369"
+  type: article
+
+- title: "»auch auf gesanglichem Gebiete überaus thätig«. Max Reger und das Lied"
+  authors: "Dennis Ried"
+  publication:
+    title: "Musik in Baden-Württemberg. Jahrbuch 2019/2020"
+    issue: 25
+    pages: "115–126"
+    year: 2020
+    place: Berlin
+  type: article
+
+- title: "Vorwort"
+  authors: "Dennis Ried"
+  publication:
+    title: "Welt-Ende – Gericht – Neue Welt op. 212"
+    year: 2020
+    place: München
+    publisher: Musikproduktion Höflich
+  type: article
+
+- title: "Erhebung, Transformation und Präsentation digitaler Forschungsdaten"
+  authors: "Dennis Ried"
+  publication:
+    title: "Brückenschläge zwischen Musikwissenschaft und Informatik. Theoretische und praktische Aspekte der Kooperation"
+    editors: "Stefanie Acquavella-Rauch / Andreas Münzmay / Joachim Veit"
+    pages: "41–45"
+    year: 2020
+    publisher: musiconn.publish
+  link: "https://nbn-resolving.org/urn:nbn:de:bsz:14-qucosa2-727405"
+  type: article
+
+- title: "Zwischen Komposition, Aufführung und Herausgabe. Zur Arbeit Max Regers mit August Schmid-Lindner"
+  authors: "Dennis Ried"
+  publication:
+    title: "Mitteilungen"
+    editors: "Almut Ochsmann im Auftrag der Internationalen Max-Reger-Gesellschaft"
+    issue: 35
+    pages: "7–15"
+    year: 2019
+    place: Karlsruhe
+  type: article
+
+- title: "Creating, transforming and representing data at Baumann-Digital and Joachim-Raff-Archiv"
+  authors: "Dennis Ried"
+  publication:
+    year: 2019
+    place: Wien
+    conference: Music-Encoding-Conference
+  type: poster
+
+- title: "Creating, transforming and representing data at Baumann-Digital and Joachim-Raff-Archiv"
+  authors: "Dennis Ried"
+  publication:
+    year: 2019
+    place: Paderborn
+    conference: Jahrestagung der Gesellschaft für Musikforschung
+  type: poster
+
+- title: "»Ein gar kräftigliches, nie versiegendes Heilmittel« – Max Regers Klavierbearbeitungen Bach'scher Orgelwerke"
+  authors: "Dennis Ried / Christopher Grafschmidt"
+  publication:
+    title: "Bach - Reger. Transcriptions for Piano Duet"
+    editors: "audite"
+    year: 2019
+  type: booklet
+
+- title: "Daten, Daten, Daten – Händische Listen vs. automatisierte Register"
+  authors: "Dennis Ried"
+  publication:
+    year: 2018
+    place: Paderborn
+    conference: Edirom-Summer-School
+  type: poster
+
+- title: "Folgenreich: Reformation und Kulturgeschichte. Buchbesprechung"
+  authors: "Dennis Ried"
+  publication:
+    title: "Mitteilungen"
+    editors: "Almut Ochsmann im Auftrag der Internationalen Max-Reger-Gesellschaft"
+    year: 2017
+    place: Karlsruhe
+  type: review
+
+- title: "BauDi – Digitales Konvolut und weiter?"
+  authors: "Dennis Ried"
+  publication:
+    year: 2017
+    place: Paderborn
+    conference: Edirom-Summer-School
+  type: poster
+
+- title: "Scherzo g-Moll WoO II/1 und Harmonies funèbres WoO II/4. Erfahrungsbericht über die Anfertigung von Stimmenmaterial"
+  authors: "Daniel Fütterer / Judith Gawlok / Annelie Lamprecht / Dennis Ried"
+  publication:
+    title: "Mitteilungen"
+    editors: "Almut Ochsmann im Auftrag der Internationalen Max-Reger-Gesellschaft"
+    issue: 29
+    pages: "11–13"
+    year: 2016
+    place: Karlsruhe
+  type: article
+
+- title: "Musikmanuskriptvermittlung. Zwischen Scans und Benutzern"
+  authors: "Dennis Ried"
+  publication:
+    year: 2016
+    place: Paderborn
+    conference: Edirom-Summer-School
+  type: poster
+
+- title: "Mögliche digitale Zusatzangebote bei der Manuskriptdigitalisierung von wissenschaftlichen Bibliotheken am Beispiel ausgewählter Werke des Komponisten Johann Wenzel Kalliwoda in der Badischen Landesbibliothek"
+  authors: "Dennis Ried"
+  publication:
+    year: 2016
+    place: Mainz
+    conference: Internationaler Kongress der Gesellschaft für Musikforschung
+  type: poster
+
+- title: "Reger. Complete Works for Clarinet and Piano"
+  authors: "Dennis Ried"
+  publication:
+    title: "Reger. Complete Works for Clarinet and Piano"
+    editors: "Musikproduktion Dabringhaus und Grimm (MDG)"
+    year: 2016
+  type: booklet

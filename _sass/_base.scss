@@ -244,13 +244,12 @@ p {
   }
 
   .publication-title {
-    font-size: 16px;
+    font-style: italic;
     font-weight: 400;
-    color: $text-color;
     margin-bottom: 1px;
   }
   .publication-authors {
-    font-style: italic;
+    font-style: normal;
     color: $text-grey;
     margin-bottom: 1px;
   }
@@ -361,5 +360,78 @@ p {
 
   .fas {
     margin-right: 5px;
+  }
+}
+
+.extend-button {
+  background: $theme-color;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken($theme-color, 10%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .fas {
+    margin-right: 5px;
+  }
+}
+
+/* ======= Publications Toggle ======= */
+.publication-hidden {
+  display: none;
+}
+
+.publication-visible {
+  display: block;
+}
+
+.publications-section {
+  .item {
+    margin-bottom: 20px;
+    
+    li {
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    
+    .publication-authors {
+      color: $text-color-secondary;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+    
+    .publication-details {
+      color: $text-grey;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+    
+    .publication-type {
+      margin-top: 5px;
+      
+      .badge {
+        font-size: 11px;
+        padding: 3px 8px;
+        background-color: lighten($theme-color, 10%);
+        color: #fff;
+        border-radius: 3px;
+      }
+    }
   }
 }

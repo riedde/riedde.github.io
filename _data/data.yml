@@ -192,10 +192,10 @@ commitment:
 experiences:
   title: Berufserfahrung
   info:
-  - role: Juniorprofessur für Musikwissenschaft mit Schwerpunkt Musikedition und Digital Humanities
-    time: 2025 - Present
+  - role: Juniorprofessor für Musikwissenschaft
+    time: Seit 2025
     company: Martin-Luther-Universität Halle-Wittenberg
-    details:
+    details: Akademie-Juniorprofessur für Musikwissenschaft mit Schwerpunkt Musikedition und Digital Humanities
   - role: Wissenschaftlicher Mitarbeiter (DH)
     time: Sep. 2021–Okt. 2024
     company: Universität Paderborn
@@ -250,11 +250,11 @@ oss:
 
   - title: Edirom Online
     link: "https://edirom.github.io/Edirom-Online/"
-    tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+    tagline: "Eine Open-Source-Webanwendung zur Erarbeitung und Veröffentlichung digitaler und hybrider Musikeditionen."
 
   - title: WeGA-WebApp
     link: "https://github.com/edirom/wega-WebApp"
-    tagline: "Die Forschungssoftware der Carl Maria von Weber-Gesamtausgabe, die bei Henze-Digital nachgenutzt wurde. (Mitarbeit: Kleinere Impulse und minimalbeiträge zur Verbesserung der Software)"
+    tagline: "Die Forschungssoftware der Carl Maria von Weber-Gesamtausgabe, die bei Henze-Digital nachgenutzt wurde. (Konzeptionelle Impulse)"
   
   - title: portal-app (Bauman-Digital)
     link: "https://github.com/Baumann-Digital/portal-app"
@@ -263,26 +263,6 @@ oss:
   - title: portal-app (Joachim-Raff-Archive)
     link: "https://github.com/Joachim-Raff-Archiv/portal-app"
     tagline: "Ein Derivat der portal-app von Baumann-Digital"
-
-publications:
-  title: Publikationen
-  intro: |
-    Eine Liste der Publikationen wird zeitnah bereitgestellt.
-  papers:
-  - title: Titel
-    authors: Dennis Ried
-    doi:
-    link: "#"
-
-conferences:
-  title: Konferenzen
-  intro: |
-    Eine Liste der Konferenzen wird zeitnah bereitgestellt.
-  events:
-  - name: 18. Filmmusiktage
-    place: Halle(Saale)
-    time: 7.–8. Nov. 2025
-    details: Diskutant in der Podiumsdiskussion
 
 footer: >
   Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

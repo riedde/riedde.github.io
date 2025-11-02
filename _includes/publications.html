@@ -1,4 +1,4 @@
-{% assign publications = site.data.data.publications %}
+{% assign publications = site.data.publications %}
 {% if publications %}
 <section class="section publications-section">
 
@@ -17,16 +17,84 @@
   {% endif %}
 
   {% for publication in publications.papers %}
-  <div class="item">
-    {% if publication.link %}
-      <li><a href="{{ publication.link }}">{{ publication.title }}</a></li>
-    {% else %}
-      <li>{{ publication.title }}</li>
+  <div class="item {% if forloop.index > 5 %}publication-hidden{% endif %}">
+    
+    {%- comment -%} Format based on publication type {%- endcomment -%}
+    
+    {%- if publication.type == 'article' -%}
+      {%- comment -%} Article format: {Authors/Editors}: {title}, in: {publication-title}, hrsg. v. {publication-editors}, {place} {year(issue)}, S. {pages}, DOI: {doi} {%- endcomment -%}
+      <div class="publication-citation">
+        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }}</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.publication.issue %}({{ publication.publication.issue }}){% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+      </div>
+    
+    {%- elsif publication.type == 'in-book' or publication.type == 'booklet' or publication.type == 'review' -%}
+      {%- comment -%} In-Book/Booklet/Review format: {Authors/Editors}: {title}, in: {publication-title}, hrsg. v. {publication-editors}, {place} {year}, DOI: {doi} {%- endcomment -%}
+      <div class="publication-citation">
+        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }} (Hg.)</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+      </div>
+    
+    {%- elsif publication.type == 'book' -%}
+      {%- comment -%} Book format: Two variants - with authors or with editors {%- endcomment -%}
+      <div class="publication-citation">
+        {% if publication.authors %}
+          {%- comment -%} Variant 1: {authors}: {title}, {place} {year} {%- endcomment -%}
+          <span class="publication-authors">{{ publication.authors }}</span>: 
+        {% elsif publication.editors %}
+          {%- comment -%} Variant 2: {editors} (Hg.): {title}, {place} {year} {%- endcomment -%}
+          <span class="publication-authors">{{ publication.editors }}</span> (Hg.): 
+        {% endif %}
+        {% if publication.link %}
+          <a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>
+        {% else %}
+          <span class="publication-title">{{ publication.title }}</span>
+        {% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+      </div>
+    
+    {%- elsif publication.type == 'poster' -%}
+      {%- comment -%} Format: {Authors}: {title}, {conference}, {place} {year} {%- endcomment -%}
+      <div class="publication-citation">
+        <span class="publication-authors">{{ publication.authors }}</span>: 
+        {% if publication.link %}
+          <a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>
+        {% else %}
+          <span class="publication-title">{{ publication.title }}</span>
+        {% endif %}{% if publication.publication.conference %}, {{ publication.publication.conference }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}
+      </div>
+    
+    {%- else -%}
+      {%- comment -%} Default format for other types {%- endcomment -%}
+      {% if publication.link %}
+        <li><a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a></li>
+      {% else %}
+        <li>{{ publication.title }}</li>
+      {% endif %}
+      <div class="publication-authors">{{ publication.authors }}</div>
+      {% if publication.publication %}
+      <div class="publication-details">
+        {% if publication.publication.title %}
+          <em>{{ publication.publication.title }}</em>{% if publication.publication.editors %}, hrsg. von {{ publication.publication.editors }}{% endif %}{% if publication.publication.issue %}, Nr. {{ publication.publication.issue }}{% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.publication.year %} ({{ publication.publication.year }}){% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.publisher %}: {{ publication.publication.publisher }}{% endif %}.
+        {% elsif publication.publication.publisher %}
+          {{ publication.publication.publisher }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.year %} ({{ publication.publication.year }}){% endif %}.
+        {% elsif publication.publication.year %}
+          {{ publication.publication.year }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}.
+        {% endif %}
+      </div>
+      {% endif %}
+    {%- endif -%}
+    
+    {% if publication.type %}
+    <div class="publication-type"><span class="badge badge-secondary">{{ publication.type }}</span></div>
     {% endif %}
-    <div class="publication-authors">{{ publication.authors }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
   </div><!--//item-->
   {% endfor %}
+
+  {% if publications.papers.size > 5 %}
+  <div class="text-center" style="margin-top: 20px;">
+    <button id="togglePublications" class="extend-button">
+      <i class="fas fa-angle-down"></i> Alle anzeigen ({{ publications.papers.size }})
+    </button>
+  </div>
+  {% endif %}
 
 </section><!--//section-->
 {% endif %}
