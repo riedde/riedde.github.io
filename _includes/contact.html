@@ -21,7 +21,7 @@
 
     {% if sidebar.timezone %}
     <li class="timezone"><i class="fas fa-clock"></i>
-      <a href="https://worldtimeapi.org/timezone/{{ sidebar.timezone }}" target="_blank">{{ sidebar.timezone }} Timezone</a>
+      <a href="https://worldtimeapi.org/timezone/{{ sidebar.timezone }}" target="_blank">{{ sidebar.timezone }}</a>
     </li>
     {% endif %}
 
@@ -37,18 +37,12 @@
     </li>
     {% endif %}
 
-    {% if sidebar.linkedin %}
-    <li class="linkedin"><i class="fab fa-linkedin"></i>
-      <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank">{{ sidebar.linkedin }}</a>
+    {% if sidebar.orcid %}
+    <li class="orcid"><i class="fab fa-orcid"></i>
+      <a href="https://orcid.org/{{ sidebar.orcid }}" target="_blank">{{ sidebar.orcid }}</a>
     </li>
     {% endif %}
-
-    {% if sidebar.xing %}
-    <li class="xing"><i class="fab fa-xing"></i>
-      <a href="https://www.xing.com/profile/{{ sidebar.xing }}" target="_blank">{{ sidebar.xing }}</a>
-    </li>
-    {% endif %}
-
+    
     {% if sidebar.github %}
     <li class="github"><i class="fab fa-github"></i>
       <a href="https://github.com/{{ sidebar.github }}" target="_blank">{{ sidebar.github }}</a>
@@ -58,6 +52,25 @@
     {% if sidebar.gitlab %}
     <li class="gitlab"><i class="fab fa-gitlab"></i>
       <a href="https://gitlab.com/{{ sidebar.gitlab }}" target="_blank">{{ sidebar.gitlab }}</a>
+    </li>
+    {% endif %}
+    
+    {% if sidebar.linkedin %}
+    <li class="linkedin"><i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank">{{ sidebar.linkedin }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.mastodon %}
+    {% assign mastodon_handle = sidebar.mastodon | split: '/' %}
+    <li class="mastodon"><i class="fab fa-mastodon"></i>
+      <a href="{{ sidebar.mastodon }}" target="_blank">{{ mastodon_handle[3] }}@{{ mastodon_handle[2] }}</a>
+    </li>
+    {% endif %}
+    
+    {% if sidebar.xing %}
+    <li class="xing"><i class="fab fa-xing"></i>
+      <a href="https://www.xing.com/profile/{{ sidebar.xing }}" target="_blank">{{ sidebar.xing }}</a>
     </li>
     {% endif %}
 
@@ -77,13 +90,6 @@
     {% assign bluesky_handle = sidebar.bluesky | remove: '@' %}
     <li class="bluesky"><i class="fab fa-bluesky"></i>
       <a href="https://bsky.app/profile/{{ bluesky_handle }}" target="_blank">{{ sidebar.bluesky }}</a>
-    </li>
-    {% endif %}
-    
-    {% if sidebar.mastodon %}
-    {% assign mastodon_handle = sidebar.mastodon | split: '/' %}
-    <li class="mastodon"><i class="fab fa-mastodon"></i>
-      <a href="{{ sidebar.mastodon }}" target="_blank">{{ mastodon_handle[3] }}@{{ mastodon_handle[2] }}</a>
     </li>
     {% endif %}
 
