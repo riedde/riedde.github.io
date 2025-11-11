@@ -2,6 +2,14 @@ title: Publikationen
 intro: |
   Liste derzeit noch nicht vollständig. Ziel: Meine gesamte Publikationsliste. Die Vorschau zeigt die fünf zuletzt erschienenen Titel.
 papers:
+- title: "Mit wenig viel erreichen: Kreative Infrastruktur-Lösungen für große und kleine
+DH-Projekte"
+  authors: "Dennis Ried"
+  publication:
+    year: 2025
+  doi: "10.5281/zenodo.17582887"
+  type: presentation
+
 - title: "[Chapter] 3 Metadata in MEI"
   editors: "Dennis Ried / Clemens Gubsch"
   publication:
