@@ -103,41 +103,41 @@ skills:
   title: Kompetenzen
 
   toolset:
+  - name: MEI-XML
+    level: 100%
+  
   - name: TEI-XML
     level: 85%
-
-  - name: MEI-XML
-    level: 95%
 
   - name: XQuery
     level: 90%
 
   - name: XSLT
-    level: 75%
+    level: 80%
 
   - name: TEI-ODD Schema
-    level: 85%
+    level: 95%
 
   - name: RelaxNG
-    level: 75%
+    level: 80%
 
   - name: Schematron
     level: 80%
 
   - name: GitLab CI/CD
-    level: 85%
+    level: 80%
 
   - name: eXist-db
-    level: 95%
+    level: 90%
 
   - name: Apache ANT
     level: 90%
 
   - name: Docker
-    level: 80%
+    level: 60%
 
   - name: HTML 5
-    level: 95%
+    level: 100%
 
   - name: CSS 3
     level: 95%
@@ -149,14 +149,14 @@ skills:
     level: 90%
 
   - name: OxygenXML Frameworks
-    level: 70%
+    level: 40%
 
   - name: LaTeX
-    level: 90%
+    level: 80%
 
   - name: LilyPond (Notensatz)
     level: 85%
-
+  
 commitment:
   title: Engagement
   info:
@@ -194,6 +194,17 @@ commitment:
       role: Schatzmeister
       details: |
         Verwaltung der Vereinsfinanzen und Unterstützung der Dommusik.
+
+    - company: "Doktorandenkonvent der HfM Karlsruhe"
+      role: "Vorsitzender"
+      details: |
+          2022–2023, Vertretung der Interessen der Doktorand*innen.
+    - company: "Doktorandenkonvent der HfM Karlsruhe"
+      role: "Stellv. Vorsitzender"
+      details: |
+          2018–2022, Vertretung der Interessen der Doktorand*innen.
+    
+  
 
 experiences:
   title: Berufserfahrung
