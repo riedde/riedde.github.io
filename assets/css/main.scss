@@ -17,6 +17,31 @@ $sidebar-order: 2;
 @use "sass:color";
 @use "skins/{{ site.theme_skin | default: 'green' }}" as skin;
 @use "index" as *; // provide mixins and utilities
+@use "responsive" as responsive;
+@use "utilities" as utilities;
+
+@use "print" as print with (
+	$theme-color: skin.$theme-color,
+	$text-color: skin.$text-color,
+	$text-color-secondary: skin.$text-color-secondary,
+	$text-grey: skin.$text-grey,
+	$smoky-white: skin.$smoky-white,
+	$heart: skin.$heart
+);
+
+@use "base" as base with (
+	$theme-color: skin.$theme-color,
+	$text-color: skin.$text-color,
+	$text-color-secondary: skin.$text-color-secondary,
+	$text-grey: skin.$text-grey,
+	$divider: skin.$divider,
+	$lighter-grey: skin.$lighter-grey,
+	$darker-grey: skin.$darker-grey,
+	$smoky-white: skin.$smoky-white,
+	$heart: skin.$heart,
+	$resume-order: $resume-order,
+	$sidebar-order: $sidebar-order
+);
 
 // map selected skin variables into the global names expected by partials
 $theme-color: skin.$theme-color;
@@ -28,5 +53,3 @@ $lighter-grey: skin.$lighter-grey;
 $darker-grey: skin.$darker-grey;
 $smoky-white: skin.$smoky-white;
 $heart: skin.$heart;
-
-@import "default"; // main partials (gradual migration)

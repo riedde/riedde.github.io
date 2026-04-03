@@ -12,5 +12,5 @@
 @use "responsive" as responsive;
 @use "utilities" as utilities;
 
-@import "base";
-@import "print";
+@use "base" as base;
+@use "print" as print;
