@@ -1,9 +1,17 @@
 title: Publikationen
 intro: |
-  Liste derzeit noch nicht vollständig. Ziel: Meine gesamte Publikationsliste. Die Vorschau zeigt die fünf zuletzt erschienenen Titel.
+  Diese Liste ist aktuell nicht vollständig.
 papers:
-- title: "Mit wenig viel erreichen: Kreative Infrastruktur-Lösungen für große und kleine
-DH-Projekte"
+- title: "[Chapter] 3 Metadata in MEI"
+  editors: "Dennis Ried / Clemens Gubsch"
+  publication:
+    title: "MEI Guidelines 6.0"
+    editors: "Johannes Kepper / Perry Roland"
+    year: 2026
+  type: in-book
+  status: upcoming
+
+- title: "Mit wenig viel erreichen: Kreative Infrastruktur-Lösungen für große und kleine DH-Projekte"
   authors: "Dennis Ried"
   publication:
     year: 2025
@@ -16,6 +24,7 @@ DH-Projekte"
     title: "MEI Guidelines 5.1"
     editors: "Johannes Kepper / Perry Roland"
     year: 2025
+  doi: "10.5281/zenodo.14795519"
   type: in-book
 
 - title: "Hans Werner Henzes künstlerisches Netzwerk"
