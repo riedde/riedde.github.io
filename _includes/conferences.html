@@ -51,12 +51,54 @@
     <div class="item {% if is_past %}conference-hidden{% endif %}">
       <div>
         <span class="conferences-name">{% if conference.link %}<a href="{{ conference.link }}" target="_blank">{{ conference.name }}</a>{% else %}{{ conference.name }}{% endif %}</span>
-        {%- comment -%} render date from ISO fields if present {%- endcomment -%}
-        {% if conference["time-start"] %},
-          {% if conference["time-end"] and conference["time-end"] != conference["time-start"] %}
-            {{ conference["time-start"] | date: "%-d. %b" }}–{{ conference["time-end"] | date: "%-d. %b %Y" }}
+        {%- comment -%} render date from ISO fields if present with German month abbreviations {%- endcomment -%}
+        {% if conference["time-start"] %}
+          {% assign s = conference["time-start"] %}
+          {% assign e = conference["time-end"] %}
+
+          {% assign s_day = s | date: "%-d" %}
+          {% assign s_month_num = s | date: "%m" %}
+          {% case s_month_num %}
+            {% when "01" %}{% assign s_month = "Jan." %}
+            {% when "02" %}{% assign s_month = "Feb." %}
+            {% when "03" %}{% assign s_month = "Mär." %}
+            {% when "04" %}{% assign s_month = "Apr." %}
+            {% when "05" %}{% assign s_month = "Mai" %}
+            {% when "06" %}{% assign s_month = "Jun." %}
+            {% when "07" %}{% assign s_month = "Jul." %}
+            {% when "08" %}{% assign s_month = "Aug." %}
+            {% when "09" %}{% assign s_month = "Sep." %}
+            {% when "10" %}{% assign s_month = "Okt." %}
+            {% when "11" %}{% assign s_month = "Nov." %}
+            {% when "12" %}{% assign s_month = "Dez." %}
+          {% endcase %}
+
+          {% if e and e != s %}
+            {% assign e_day = e | date: "%-d" %}
+            {% assign e_month_num = e | date: "%m" %}
+            {% assign e_year = e | date: "%Y" %}
+            {% case e_month_num %}
+              {% when "01" %}{% assign e_month = "Jan." %}
+              {% when "02" %}{% assign e_month = "Feb." %}
+              {% when "03" %}{% assign e_month = "Mär." %}
+              {% when "04" %}{% assign e_month = "Apr." %}
+              {% when "05" %}{% assign e_month = "Mai" %}
+              {% when "06" %}{% assign e_month = "Jun." %}
+              {% when "07" %}{% assign e_month = "Jul." %}
+              {% when "08" %}{% assign e_month = "Aug." %}
+              {% when "09" %}{% assign e_month = "Sep." %}
+              {% when "10" %}{% assign e_month = "Okt." %}
+              {% when "11" %}{% assign e_month = "Nov." %}
+              {% when "12" %}{% assign e_month = "Dez." %}
+            {% endcase %}
+            {% assign s_year = s | date: "%Y" %}
+            {% if s_month_num == e_month_num and s_year == e_year %}
+              , {{ s_day }}.–{{ e_day }}. {{ e_month }} {{ e_year }}
+            {% else %}
+              , {{ s_day }}. {{ s_month }}–{{ e_day }}. {{ e_month }} {{ e_year }}
+            {% endif %}
           {% else %}
-            {{ conference["time-start"] | date: "%-d. %b %Y" }}
+            , {{ s_day }}. {{ s_month }} {{ s | date: "%Y" }}
           {% endif %}
         {% endif %}
         {% if conference.institution %}, <span class="conferences-institution">{{ conference.institution }}</span>{% endif %}{% if conference.place %}, {{ conference.place }}{% endif %}
