@@ -23,8 +23,8 @@
   
   {%- comment -%} First pass: count future and past events based on hide-after date {%- endcomment -%}
   {% for conference in conferences.events %}
-    {% if conference.hide-after %}
-      {% assign hide_date = conference.hide-after | date: "%Y-%m-%d" %}
+    {% if conference["hide-after"] %}
+      {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
       {% if hide_date >= today %}
         {% assign future_count = future_count | plus: 1 %}
       {% else %}
@@ -39,8 +39,8 @@
   {% for conference in conferences.events %}
     {%- comment -%} Show future events always, hide past events with conference-hidden class {%- endcomment -%}
     {% assign is_past = false %}
-    {% if conference.hide-after %}
-      {% assign hide_date = conference.hide-after | date: "%Y-%m-%d" %}
+    {% if conference["hide-after"] %}
+      {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
       {% if hide_date < today %}
         {% assign is_past = true %}
       {% endif %}
