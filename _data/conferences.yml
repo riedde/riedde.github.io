@@ -1,7 +1,31 @@
-title: Konferenzen
+title: "Konferenzen/Vorträge"
 intro: |
   Eine Liste der Konferenzen wird zeitnah bereitgestellt.
 events:
+- name: "78. Jahrestagung der Gesellschaft für Musikforschung"
+  time: 29. Sep.–2. Okt. 2026
+  details: "Fachgruppensitzung und Fachgruppensymposium Digitale Musikwissenschaft"
+  link: "https://www.uni-frankfurt.de/176658317/GfM_Tagung_2026"
+  institution: "Johann Wolfgang Goethe-Universität | Hochschule für Musik und Darstellende Kunst | Max Planck-Institut für Empirische Ästhetik Frankfurt am Main"
+  hide-after: 2026-10-03
+- name: "Workshop: Arbeiten mit XML"
+  time: 14.–18. Sep. 2026
+  details: "Workshop, 17. Edirom Summer School"
+  link: "https://ess.upb.de"
+  institution: Universität Paderborn
+  hide-after: 2026-09-20
+- name: "Sichtbarkeit, Nachnutzung, Infrastruktur. Die Händel-Forschung im digitalen Zeitalter"
+  time: 05. Mai 2026
+  details: "Vortrag, Werkstattgespräche 2026: Akademievorhaben im Dialog"
+  link: "https://www.adwmainz.de/aktivitaeten/veranstaltungen/details/werkstattgespraeche-2026-akademievorhaben-im-dialog-1"
+  institution: "Akademie der Wissenschaften und der Literatur | Mainz"
+  hide-after: 2026-05-07
+- name: "Vom antiken Mythos zum „musical drama“. Eine Betrachtung der dramatischen Konzeption von Händels Hercules (HWV 60)"
+  time: 8. Jun. 2026
+  details: "Vortrag, Internationale wissenschaftliche Konferenz zu den Händel-Festspielen 2026"
+  link: "https://www.haendel.de/events/event/internationale-wissenschaftliche-konferenz-4/"
+  institution: "Georg-Friedrich-Händel-Gesellschaft | Stiftung Händel-Haus | Abt. Musikwissenschaft der Martin-Luther-Universität Halle-Wittenberg"
+  hide-after: 2026-06-10
 - name: 18. Filmmusiktage
   place: Halle(Saale)
   time: 7.–8. Nov. 2025

@@ -68,6 +68,11 @@ career-profile:
 education:
   title: Ausbildung
   info:
+  - degree: Akademie-Juniorprofessur (W1)
+    university: Martin-Luther-Universität Halle-Wittenberg
+    time: 2025
+    details: |
+      Juniorprofessur für Musikwissenschaft mit Schwerpunkt Musikedition und Digital Humanities
   - degree: Ruf nach Halle an der Saale (W1)
     university: Martin-Luther-Universität Halle-Wittenberg
     time: 2024
