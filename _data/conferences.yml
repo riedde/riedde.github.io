@@ -1,63 +1,241 @@
-title: "Konferenzen/Vorträge"
+title: Combined Conferences
 intro: |
-  Eine Liste der Konferenzen wird zeitnah bereitgestellt.
+  Automatisch zusammengeführte Konferenzen. Bitte prüfen.
 events:
 - name: "78. Jahrestagung der Gesellschaft für Musikforschung"
-  time: 29. Sep.–2. Okt. 2026
+  time-start: 29. Sep.
+  time-end: 2. Okt. 2026
   details: "Fachgruppensitzung und Fachgruppensymposium Digitale Musikwissenschaft"
   link: "https://www.uni-frankfurt.de/176658317/GfM_Tagung_2026"
   institution: "Johann Wolfgang Goethe-Universität | Hochschule für Musik und Darstellende Kunst | Max Planck-Institut für Empirische Ästhetik Frankfurt am Main"
-  hide-after: 2026-10-03
+  hide-after: "2026-10-03"
 - name: "Workshop: Arbeiten mit XML"
-  time: 14.–18. Sep. 2026
+  time-start: 14.
+  time-end: 18. Sep. 2026
   details: "Workshop, 17. Edirom Summer School"
   link: "https://ess.upb.de"
-  institution: Universität Paderborn
-  hide-after: 2026-09-20
+  institution: "Universität Paderborn"
+  hide-after: "2026-09-20"
 - name: "Sichtbarkeit, Nachnutzung, Infrastruktur. Die Händel-Forschung im digitalen Zeitalter"
-  time: 05. Mai 2026
+  time-start: 05. Mai 2026
   details: "Vortrag, Werkstattgespräche 2026: Akademievorhaben im Dialog"
   link: "https://www.adwmainz.de/aktivitaeten/veranstaltungen/details/werkstattgespraeche-2026-akademievorhaben-im-dialog-1"
   institution: "Akademie der Wissenschaften und der Literatur | Mainz"
-  hide-after: 2026-05-07
-- name: "Vom antiken Mythos zum „musical drama“. Eine Betrachtung der dramatischen Konzeption von Händels Hercules (HWV 60)"
-  time: 8. Jun. 2026
+  hide-after: "2026-05-07"
+- name: "Vom antiken Mythos zum »musical drama«. Eine Betrachtung der dramatischen Konzeption von Händels Hercules (HWV 60)"
+  time-start: 8. Jun. 2026
   details: "Vortrag, Internationale wissenschaftliche Konferenz zu den Händel-Festspielen 2026"
   link: "https://www.haendel.de/events/event/internationale-wissenschaftliche-konferenz-4/"
   institution: "Georg-Friedrich-Händel-Gesellschaft | Stiftung Händel-Haus | Abt. Musikwissenschaft der Martin-Luther-Universität Halle-Wittenberg"
-  hide-after: 2026-06-10
-- name: 18. Filmmusiktage
-  place: Halle(Saale)
-  time: 7.–8. Nov. 2025
-  details: Diskutant in der Podiumsdiskussion
-  link: "https://filmmusiktage.de/filmmusiktage/kongress/"
-  hide-after: 2025-11-08
-- name: "Mit wenig viel erreichen: Kreative Infrastruktur-Lösungen für große und kleine DH-Projekte"
-  time: 10. Nov. 2025
-  details: "Gastvortrag in der Ringvorlesung »Digital Humanities im Fokus«"
-  link: "https://www.uni-rostock.de/universitaet/kommunikation-und-aktuelles/presse-und-kommunikationsstelle/veranstaltungskalender/detailansicht/n/jun-prof-dr-dennis-ried-martin-luther-universitaet-halle-wittenberg-mit-wenig-viel-erreichen-kreative-infrastruktur-loesungen-fuer-grosse-und-kleine-dh-projekte-249675/"
-  institution: Universität Rostock
-  hide-after: 2025-11-10
-- name: "Mensch – Maschine – Miteinander. Aspekte digitalen Arbeitens in der Musikwissenschaft"
-  time: 17. Dez. 2025
+  hide-after: "2026-06-10"
+- name: "›Lieber Hans,…‹: Der Briefdialog Henze-Enzensberger als Werkstatt für die Arbeit an der Oper La Cubana"
+  time-start: 22. Jan. 2026
   details: "Gastvortrag im Kolloquium"
-  link: "https://www.uni-goettingen.de/de/musikwissenschaftliches+kolloquium+im+wintersemester+2025/26/703119.html"
-  institution: Universität Göttingen
-  hide-after: 2025-12-17
-- name: ",Lieber Hans,…‘: Der Briefdialog Henze-Enzensberger als Werkstatt für die Arbeit an der Oper La Cubana"
-  time: 22. Jan. 2026
-  details: "Gastvortrag im Kolloquium"
-  institution: Folkwang Universität Essen
-  hide-after: 2026-01-22
+  institution: "Folkwang Universität Essen"
+  hide-after: "2026-01-22"
 - name: "Was geben wir eigentlich heraus? Ein Blick auf digitale Editionen"
-  time: 11.-14. Feb. 2026
+  time-start: 11.
+  time-end: 14. Feb. 2026
   details: "Vortrag zur 21. internationalen Tagung der Arbeitsgemeinschaft für germanistische Edition »…herausgegeben von… Editores und Edenda«"
   link: "https://www.ag-edition.org/?page_id=28"
-  institution: Universität Erlangen-Nürnberg
-  hide-after: 2026-02-14
+  institution: "Universität Erlangen-Nürnberg"
+  hide-after: "2026-02-14"
+- name: "»…herausgegeben von… Editores und Edenda«. Plenartagung der Arbeitsgemeinschaft germansitische Edition"
+  place: Erlangen
+  institution: "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)"
+  time-start: "2026-02-11"
+  time-end: "2026-02-14"
+  details: |
+  hide-after: "2026-02-14"
+- name: "18. Filmmusiktage"
+  place: Halle(Saale)
+  time-start: 7.
+  time-end: 8. Nov. 2025
+  details: "Diskutant in der Podiumsdiskussion"
+  link: "https://filmmusiktage.de/filmmusiktage/kongress/"
+  hide-after: "2025-11-08"
+- name: "Mit wenig viel erreichen: Kreative Infrastruktur-Lösungen für große und kleine DH-Projekte"
+  time-start: 10. Nov. 2025
+  details: "Gastvortrag in der Ringvorlesung »Digital Humanities im Fokus«"
+  link: "https://www.uni-rostock.de/universitaet/kommunikation-und-aktuelles/presse-und-kommunikationsstelle/veranstaltungskalender/detailansicht/n/jun-prof-dr-dennis-ried-martin-luther-universitaet-halle-wittenberg-mit-wenig-viel-erreichen-kreative-infrastruktur-loesungen-fuer-grosse-und-kleine-dh-projekte-249675/"
+  institution: "Universität Rostock"
+  hide-after: "2025-11-10"
+- name: "Mensch – Maschine – Miteinander. Aspekte digitalen Arbeitens in der Musikwissenschaft"
+  time-start: 17. Dez. 2025
+  details: "Gastvortrag im Kolloquium"
+  link: "https://www.uni-goettingen.de/de/musikwissenschaftliches+kolloquium+im+wintersemester+2025/26/703119.html"
+  institution: "Universität Göttingen"
+  hide-after: "2025-12-17"
 - name: "Arbeiten mit XML"
-  time: 8.–12. Sep. 2025
+  time-start: 8.
+  time-end: 12. Sep. 2025
   details: "Workshop zur 16. Edirom Summer School"
   link: "https://ess.upb.de"
-  institution: Universität Paderborn
-  hide-after: 2025-09-12
+  institution: "Universität Paderborn"
+  hide-after: "2025-09-12"
+- name: "deRSE25 – Conference for Research Software Engineering in Germany"
+  place: Karlsruhe
+  institution: "Karlsruher Institut für Technologie (KIT)"
+  time-start: "2025-02-25"
+  time-end: "2025-02-27"
+  hide-after: "2025-02-27"
+- name: "»Musik in einer geteilten Welt«, 77. Jahrestagung der Gesellschaft für Musikforschung"
+  place: Weimar
+  institution: "Hochschule für Musik Franz Liszt Weimar"
+  time-start: "2025-10-06"
+  time-end: "2025-10-09"
+  hide-after: "2025-10-09"
+- name: "Music Encoding Conference"
+  place: London (online)
+  institution: "City University of London / Goldsmiths University of London"
+  time-start: "2025-06-03"
+  time-end: "2025-06-06"
+  hide-after: "2025-06-06"
+- name: "»Under Construction«. Jahrestagung der Digital Humanities im deutschsprachigen Raum"
+  place: Bielefeld
+  institution: "Universität Bielefeld"
+  time-start: "2025-03-03"
+  time-end: "2025-03-07"
+  hide-after: "2025-03-07"
+- name: "MEI Developer Meeting"
+  place: Amsterdam
+  institution: "Huygens Institute for History and Culture of the Netherlands"
+  time-start: "2025-02-04"
+  time-end: "2025-02-07"
+  hide-after: "2025-02-07"
+- name: "Internationale Wissenschaftliche Konferenz / Händel-Festspiele"
+  place: Halle(Saale)
+  institution: "Martin-Luther-Universität Halle-Wittenberg"
+  time-start: "2025-06-10"
+  time-end: "2025-06-12"
+  details: "Händels italienische Texte – Chancen und Herausforderungen einer kritischen Edition"
+  hide-after: "2025-06-12"
+- name: "16. Edirom-Summer-School"
+  place: Paderborn
+  institution: "Universität Paderborn/HfM Detmold"
+  time-start: "2025-09-08"
+  time-end: "2025-09-12"
+  hide-after: "2025-09-12"
+- name: "5. Culture Community Plenary (NFDI4Culture)"
+  place: Mainz
+  institution: "Akademie der Wissenschaften und der Literatur"
+  time-start: "2025-09-24"
+  time-end: "2025-09-26"
+  hide-after: "2025-09-26"
+- name: "Jahrestagung der Gesellschaft für Musikforschung"
+  place: Köln
+  institution: "Universität Köln"
+  time-start: "2024-09-11"
+  time-end: "2022-09-14"
+  hide-after: "2022-09-14"
+- name: "15. Edirom-Summer-School"
+  place: Paderborn
+  institution: "Universität Paderborn/HfM Detmold"
+  time-start: "2024-09-23"
+  time-end: "2024-09-27"
+  hide-after: "2024-09-27"
+- name: "»Quo vadis«. Jahrestagung der Digital Humanities im deutschsprachigen Raum"
+  place: Passau
+  institution: "Universität Passau"
+  time-start: "2024-02-26"
+  time-end: "2024-03-01"
+  details: "Synergieeffekte zwischen Henze-Digital und der Carl Maria von Weber-Gesamtausgabe durch die bilaterale Weiterentwicklung der WeGA-WebApp"
+  hide-after: "2024-03-01"
+- name: "Edition von Filmmusik. Herausforderungen der Multimedialität (Int. Konferenz)"
+  place: Frankfurt am Main
+  institution: "Goethe-Universität Frankfurt am Main"
+  time-start: "2024-11-22"
+  time-end: "2024-11-23"
+  details: "Hybride Edition – Der Inbegriff von Multimedialität?"
+  hide-after: "2024-11-23"
+- name: "1. Harsh-Vocal-Camp"
+  place: Hannover
+  institution: "by Britta Görtz"
+  time-start: "2024-10-04"
+  time-end: "2024-10-06"
+  hide-after: "2024-10-06"
+- name: "Jahrestagung der Gesellschaft für Musikforschung"
+  place: Saarbrücken
+  institution: "Universität des Saarlandes"
+  time-start: "2023-10-04"
+  time-end: "2023-10-07"
+  details: "Methoden und Ziele digitaler Musikwissenschaft: Ein Marktplatz aktueller Forschung"
+  hide-after: "2023-10-07"
+- name: "JOINT MEC and TEI Conference"
+  place: Paderborn
+  institution: "Universität Paderborn"
+  time-start: "2023-09-04"
+  time-end: "2023-09-08"
+  details: "Materiality in editions of 20th-century paperbound correspondence"
+  hide-after: "2023-09-08"
+- name: "14. Edirom-Summer-School"
+  place: Paderborn
+  institution: "Universität Paderborn"
+  time-start: "2023-05-31"
+  time-end: "2023-06-02"
+  hide-after: "2023-06-02"
+- name: "Jahrestagung der Gesellschaft für Musikforschung"
+  place: Saarbrücken
+  institution: "Universität des Saarlandes"
+  time-start: "2023-10-04"
+  time-end: "2023-10-07"
+  details: "Projektvorstellung: Digitale Hans Werner Henze Briefausgabe"
+  hide-after: "2023-10-07"
+- name: "Jahrestagung der Gesellschaft für Musikforschung"
+  place: Saarbrücken
+  institution: "Universität des Saarlandes"
+  time-start: "2023-10-04"
+  time-end: "2023-10-07"
+  details: "Hybride Musikedition. Ein Kompromiss zwischen analog und digital?"
+  hide-after: "2023-10-07"
+- name: "JOINT MEC and TEI Conference"
+  place: Paderborn
+  institution: "Universität Paderborn"
+  time-start: "2023-09-04"
+  time-end: "2023-09-08"
+  details: "“This type of data in the header” – Encoding, (re)use and standardization of metadata in the context of TEI und MEI"
+  hide-after: "2023-09-08"
+- name: "Jahrestagung der Gesellschaft für Musikforschung"
+  place: Berlin
+  institution: "Humbold-Universität zu Berlin"
+  time-start: "2022-09-28"
+  time-end: "2022-10-01"
+  details: "Projektvorstellung: Digitale Hans Werner Henze Briefausgabe"
+  hide-after: "2022-10-01"
+- name: "Plenartagung »Edition als Vermittlung«"
+  place: Klagenfurt
+  institution: "Universität Klagenfurt/AG germanistische Edition"
+  time-start: "2022-09-21"
+  time-end: "2022-09-24"
+  details: "Digitale Edition im Komponisten-Portal"
+  hide-after: "2022-09-24"
+- name: "Winter school: Digitale Editionen – Interface Design"
+  place: Wuppertal
+  institution: "Universität Wuppertal"
+  time-start: "2022-03-21"
+  time-end: "2022-04-25"
+  hide-after: "2022-04-25"
+- name: "Beitrag: Edirom-Summer-School – Tagungsorganisation"
+  time-start: "2022"
+  hide-after: "2022"
+- name: "Theorie der (digitalen) Edition: Geschichte, Methodik und Tendenzen"
+  time-start: "2022"
+  time-end: "2023"
+  hide-after: "2023"
+- name: "Theorie der (digitalen) Edition: Begleitende Übung zum Seminar"
+  time-start: "2022"
+  time-end: "2023"
+  hide-after: "2023"
+- name: "Music-Encoding-Conference"
+  place: Halifax (CA)/online
+  institution: "Dalhousie University (CA)"
+  time-start: "2021-05-19"
+  time-end: "2021-07-22"
+  details: "»Play it again, Sam« – levels of complexity in encoding performance personnel"
+  hide-after: "2021-07-22"
+- name: "Musikwissenschaft nach Beethoven. XVII. Internationaler Kongress der Gesellschaft für Musikforschung"
+  place: Bonn
+  institution: "Universität Bonn/Beethoven-Haus"
+  time-start: "2021-09-28"
+  time-end: "2021-10-01"
+  hide-after: "2021-10-01"

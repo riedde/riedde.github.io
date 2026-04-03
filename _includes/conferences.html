@@ -22,7 +22,10 @@
   {% assign past_count = 0 %}
   
   {%- comment -%} First pass: count future and past events based on hide-after date {%- endcomment -%}
-  {% for conference in conferences.events %}
+  {%- comment -%} sort by time-start (newest first) {%- endcomment -%}
+  {% assign sorted_events = conferences.events | sort: 'time-start' %}
+  {% assign sorted_events = sorted_events | reverse %}
+  {% for conference in sorted_events %}
     {% if conference["hide-after"] %}
       {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
       {% if hide_date >= today %}
@@ -46,7 +49,18 @@
       {% endif %}
     {% endif %}
     <div class="item {% if is_past %}conference-hidden{% endif %}">
-      <div><span class="conferences-name">{% if conference.link %}<a href="{{ conference.link }}" target="_blank">{{ conference.name }}</a>{% else %}{{ conference.name }}{% endif %}</span>{% if conference.time %}, {{ conference.time }}{% endif %}{% if conference.institution %}, <span class="conferences-institution">{{ conference.institution }}</span>{% endif %}{% if conference.place %}, {{ conference.place }}{% endif %}</div>
+      <div>
+        <span class="conferences-name">{% if conference.link %}<a href="{{ conference.link }}" target="_blank">{{ conference.name }}</a>{% else %}{{ conference.name }}{% endif %}</span>
+        {%- comment -%} render date from ISO fields if present {%- endcomment -%}
+        {% if conference["time-start"] %},
+          {% if conference["time-end"] and conference["time-end"] != conference["time-start"] %}
+            {{ conference["time-start"] | date: "%-d. %b" }}–{{ conference["time-end"] | date: "%-d. %b %Y" }}
+          {% else %}
+            {{ conference["time-start"] | date: "%-d. %b %Y" }}
+          {% endif %}
+        {% endif %}
+        {% if conference.institution %}, <span class="conferences-institution">{{ conference.institution }}</span>{% endif %}{% if conference.place %}, {{ conference.place }}{% endif %}
+      </div>
   
       {% if conference.details %}
       <div class="publication-conference" style="font-style: oblique;">
