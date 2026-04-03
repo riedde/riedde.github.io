@@ -7,8 +7,10 @@
  * Website: http://themes.3rdwavemedia.com/
 */
 
-@import "mixins";
+@use "sass:color";
+
+@use "responsive" as responsive;
+@use "utilities" as utilities;
+
 @import "base";
-@import "responsive";
-@import "utilities";
 @import "print";

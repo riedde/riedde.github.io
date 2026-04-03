@@ -14,5 +14,19 @@ $resume-order: 1;
 $sidebar-order: 2;
 {% endif %}
 
-@import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
-@import "default"; // main partials
+@use "sass:color";
+@use "skins/{{ site.theme_skin | default: 'green' }}" as skin;
+@use "index" as *; // provide mixins and utilities
+
+// map selected skin variables into the global names expected by partials
+$theme-color: skin.$theme-color;
+$text-color: skin.$text-color;
+$text-color-secondary: skin.$text-color-secondary;
+$text-grey: skin.$text-grey;
+$divider: skin.$divider;
+$lighter-grey: skin.$lighter-grey;
+$darker-grey: skin.$darker-grey;
+$smoky-white: skin.$smoky-white;
+$heart: skin.$heart;
+
+@import "default"; // main partials (gradual migration)
