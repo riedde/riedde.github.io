@@ -50,7 +50,7 @@
         {% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
       </div>
     
-    {%- elsif publication.type == 'poster' -%}
+    {%- elsif publication.type == 'poster' or publication.type == 'presentation' -%}
       {%- comment -%} Format: {Authors}: {title}, {conference}, {place} {year} {%- endcomment -%}
       <div class="publication-citation">
         <span class="publication-authors">{{ publication.authors }}</span>: 
