@@ -22,9 +22,8 @@
   {% assign past_count = 0 %}
   
   {%- comment -%} First pass: count future and past events based on hide-after date {%- endcomment -%}
-  {%- comment -%} sort by time-start (newest first) {%- endcomment -%}
-  {% assign sorted_events = conferences.events | sort: 'time-start' %}
-  {% assign sorted_events = sorted_events | reverse %}
+  {%- comment -%} sort by `time-start` (newest first). Entries without `time-start` will be positioned by the sort behavior. {%- endcomment -%}
+  {% assign sorted_events = conferences.events | sort: 'time-start' | reverse %}
   {% for conference in sorted_events %}
     {% if conference["hide-after"] %}
       {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
@@ -39,7 +38,7 @@
     {% endif %}
   {% endfor %}
 
-  {% for conference in conferences.events %}
+  {% for conference in sorted_events %}
     {%- comment -%} Show future events always, hide past events with conference-hidden class {%- endcomment -%}
     {% assign is_past = false %}
     {% if conference["hide-after"] %}
@@ -124,20 +123,55 @@
           {%- endif -%}
         {%- endif -%}
 
-        <span class="conferences-name">{% if conference.link %}<a href="{{ conference.link }}" target="_blank">{{ conference.name | strip }}</a>{% else %}{{ conference.name | strip }}{% endif %}</span>{%- if rest != "" -%}{{ ", " }}{{ rest }}{%- endif -%}
+        <div class="conference-citation">
+          {% if conference.link %}
+            <a href="{{ conference.link }}" target="_blank" class="conference-title">{{ conference.name | strip }}</a>
+          {% else %}
+            <span class="conference-title">{{ conference.name | strip }}</span>
+          {% endif %}{% if rest != "" %}, {{ rest }}{% endif %}
+          {% if conference.details %}
+        <span class="conference" style="font-style: oblique;">
+          {{ conference.details }}
+        </span>
+        {% else %}
+        <div class="conference" style="font-style: oblique;">&nbsp;</div>
+        {% endif %}
+        </div>
+        <!--//details-->
+
+        {% if conference.type or conference.tags %}
+        <div class="publication-type">
+          {% if conference.type %}
+            {% assign types = conference.type | join: "," | split: "," %}
+            {% for t in types %}
+              <span class="badge badge-secondary">{{ t | strip }}</span>
+            {% endfor %}
+          {% endif %}
+          {% if conference.tags %}
+            {% assign tags = conference.tags | join: "," | split: "," %}
+            {% for tag in tags %}
+              <span class="badge badge-secondary">{{ tag | strip }}</span>
+            {% endfor %}
+          {% endif %}
+        </div>
+        {% endif %}
       </div>
-  
-      {% if conference.details %}
-      <div class="publication-conference" style="font-style: oblique;">
-        {{ conference.details | markdownify }}
-      </div><!--//details-->
-      {% else %}
-      <div class="publication-conference" style="font-style: oblique;">&nbsp;</div>
-      {% endif %}
     </div><!--//item-->
   {% endfor %}
 
-  {% if past_count > 0 %}
+  {%- comment -%} Fallback: if counting above missed something, scan events for any past hide-after {%- endcomment -%}
+  {% assign past_exists = false %}
+  {% for c in conferences.events %}
+    {% if c["hide-after"] %}
+      {% assign hide_date = c["hide-after"] | date: "%Y-%m-%d" %}
+      {% if hide_date < today %}
+        {% assign past_exists = true %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if past_count > 0 or past_exists %}
   <div class="text-center" style="margin-top: 20px;">
     <button id="toggleConferences" class="extend-button">
       <i class="fas fa-angle-down"></i> Vergangene anzeigen ({{ past_count }})

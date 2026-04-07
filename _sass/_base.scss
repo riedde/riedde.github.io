@@ -255,17 +255,17 @@ a {
     }
   }
 
-  .publication-title {
+  .publication-title, .conference-title {
     font-style: italic;
     font-weight: 400;
     margin-bottom: 1px;
   }
-  .publication-authors {
+  .publication-authors, .conference-authors {
     font-style: normal;
     color: $text-grey;
     margin-bottom: 1px;
   }
-  .publications-section {
+  .publications-section, .conferences-section {
     .intro {
       margin-bottom: 30px;
     }
@@ -414,11 +414,11 @@ a {
   display: none;
 }
 
-.publication-visible {
+.publication-visible, .conference-visible {
   display: block;
 }
 
-.publications-section {
+.publications-section, .conferences-section {
   .item {
     margin-bottom: 20px;
     
@@ -428,20 +428,20 @@ a {
       margin-bottom: 5px;
     }
     
-    .publication-authors {
+    .publication-authors, .conference-authors {
       color: $text-color-secondary;
       font-size: 14px;
       margin-bottom: 3px;
     }
     
-    .publication-details {
+    .publication-details, .conference-details {
       color: $text-grey;
       font-size: 13px;
       line-height: 1.5;
       margin-bottom: 5px;
     }
     
-    .publication-type {
+    .publication-type, .conference-type {
       margin-top: 5px;
       
       .badge {
@@ -449,7 +449,7 @@ a {
         padding: 3px 8px;
         background-color: color.adjust($theme-color, $lightness: 10%);
         color: #fff;
-        border-radius: 3px;
+        border-radius: 6px;
       }
     }
   }
