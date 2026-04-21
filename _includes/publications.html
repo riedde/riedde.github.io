@@ -18,66 +18,69 @@
 
   {% for publication in publications.papers %}
   <div class="item {% if forloop.index > 5 %}publication-hidden{% endif %}">
-    
+
+    {%- comment -%} Format year: full date (e.g. "2025-10-07") → "7. Okt. 2025", plain year → as-is {%- endcomment -%}
+    {%- assign pub_year_str = publication.publication.year | append: "" -%}
+    {%- if pub_year_str.size > 4 -%}
+      {%- assign pub_y_day = pub_year_str | date: "%-d" -%}
+      {%- assign pub_y_month_num = pub_year_str | date: "%m" -%}
+      {%- assign pub_y_year = pub_year_str | date: "%Y" -%}
+      {%- case pub_y_month_num -%}
+        {%- when "01" -%}{%- assign pub_y_month = "Jan." -%}
+        {%- when "02" -%}{%- assign pub_y_month = "Feb." -%}
+        {%- when "03" -%}{%- assign pub_y_month = "Mär." -%}
+        {%- when "04" -%}{%- assign pub_y_month = "Apr." -%}
+        {%- when "05" -%}{%- assign pub_y_month = "Mai" -%}
+        {%- when "06" -%}{%- assign pub_y_month = "Jun." -%}
+        {%- when "07" -%}{%- assign pub_y_month = "Jul." -%}
+        {%- when "08" -%}{%- assign pub_y_month = "Aug." -%}
+        {%- when "09" -%}{%- assign pub_y_month = "Sep." -%}
+        {%- when "10" -%}{%- assign pub_y_month = "Okt." -%}
+        {%- when "11" -%}{%- assign pub_y_month = "Nov." -%}
+        {%- when "12" -%}{%- assign pub_y_month = "Dez." -%}
+      {%- endcase -%}
+      {%- capture pub_year_formatted -%}{{ pub_y_day }}. {{ pub_y_month }} {{ pub_y_year }}{%- endcapture -%}
+    {%- elsif pub_year_str != "" -%}
+      {%- assign pub_year_formatted = pub_year_str -%}
+    {%- else -%}
+      {%- assign pub_year_formatted = "" -%}
+    {%- endif -%}
+
     {%- comment -%} Format based on publication type {%- endcomment -%}
     
     {%- if publication.type == 'article' -%}
       {%- comment -%} Article format: {Authors/Editors}: {title}, in: {publication-title}, hrsg. v. {publication-editors}, {place} {year(issue)}, S. {pages}, DOI: {doi} {%- endcomment -%}
       <div class="publication-citation">
-        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }}</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.publication.issue %}({{ publication.publication.issue }}){% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }}</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}{% if publication.publication.issue %}({{ publication.publication.issue }}){% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
       </div>
     
     {%- elsif publication.type == 'in-book' or publication.type == 'booklet' or publication.type == 'review' -%}
       {%- comment -%} In-Book/Booklet/Review format: {Authors/Editors}: {title}, in: {publication-title}, hrsg. v. {publication-editors}, {place} {year}, DOI: {doi} {%- endcomment -%}
       <div class="publication-citation">
-        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }} (Hg.)</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+        {% if publication.authors %}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}<span class="publication-authors">{{ publication.editors }} (Hg.)</span>: {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.title %}, in: <em>{{ publication.publication.title }}</em>{% endif %}{% if publication.publication.editors %}, hrsg. v. {{ publication.publication.editors }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
       </div>
     
     {%- elsif publication.type == 'book' -%}
       {%- comment -%} Book format: Two variants - with authors or with editors {%- endcomment -%}
       <div class="publication-citation">
-        {% if publication.authors %}
-          {%- comment -%} Variant 1: {authors}: {title}, {place} {year} {%- endcomment -%}
-          <span class="publication-authors">{{ publication.authors }}</span>: 
-        {% elsif publication.editors %}
-          {%- comment -%} Variant 2: {editors} (Hg.): {title}, {place} {year} {%- endcomment -%}
-          <span class="publication-authors">{{ publication.editors }}</span> (Hg.): 
-        {% endif %}
-        {% if publication.link %}
-          <a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>
-        {% else %}
-          <span class="publication-title">{{ publication.title }}</span>
-        {% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
+        {% if publication.authors %}{%- comment -%} Variant 1: {authors}: {title}, {place} {year} {%- endcomment -%}<span class="publication-authors">{{ publication.authors }}</span>: {% elsif publication.editors %}{%- comment -%} Variant 2: {editors} (Hg.): {title}, {place} {year} {%- endcomment -%}
+          <span class="publication-authors">{{ publication.editors }}</span> (Hg.): {% endif %}{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
       </div>
     
     {%- elsif publication.type == 'poster' or publication.type == 'presentation' -%}
       {%- comment -%} Format: {Authors}: {title}, {conference}, {place} {year} {%- endcomment -%}
       <div class="publication-citation">
-        <span class="publication-authors">{{ publication.authors }}</span>: 
-        {% if publication.link %}
-          <a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>
-        {% else %}
-          <span class="publication-title">{{ publication.title }}</span>
-        {% endif %}{% if publication.publication.conference %}, {{ publication.publication.conference }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ publication.publication.year }}{% endif %}
+        <span class="publication-authors">{{ publication.authors }}</span>: {% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.conference %}, {{ publication.publication.conference }}{% endif %}{% if publication.publication.place %},{{ publication.publication.place }} {% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}
       </div>
     
     {%- else -%}
       {%- comment -%} Default format for other types {%- endcomment -%}
-      {% if publication.link %}
-        <li><a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a></li>
-      {% else %}
-        <li>{{ publication.title }}</li>
-      {% endif %}
-      <div class="publication-authors">{{ publication.authors }}</div>
-      {% if publication.publication %}
+      {% if publication.link %}<li><a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a></li>{% else %}<li>{{ publication.title }}</li>{% endif %}
+      <div class="publication-authors">{{ publication.authors }}</div>{% if publication.publication %}
       <div class="publication-details">
-        {% if publication.publication.title %}
-          <em>{{ publication.publication.title }}</em>{% if publication.publication.editors %}, hrsg. von {{ publication.publication.editors }}{% endif %}{% if publication.publication.issue %}, Nr. {{ publication.publication.issue }}{% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.publication.year %} ({{ publication.publication.year }}){% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.publisher %}: {{ publication.publication.publisher }}{% endif %}.
-        {% elsif publication.publication.publisher %}
-          {{ publication.publication.publisher }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.year %} ({{ publication.publication.year }}){% endif %}.
-        {% elsif publication.publication.year %}
-          {{ publication.publication.year }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}.
-        {% endif %}
+        {% if publication.publication.title %}<em>{{ publication.publication.title }}</em>{% if publication.publication.editors %}, hrsg. von {{ publication.publication.editors }}{% endif %}{% if publication.publication.issue %}, Nr. {{ publication.publication.issue }}{% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.publication.year %} ({{ pub_year_formatted }}){% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.publisher %}: {{ publication.publication.publisher }}{% endif %}.
+        {% elsif publication.publication.publisher %}{{ publication.publication.publisher }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.year %} ({{ pub_year_formatted }}){% endif %}.
+        {% elsif publication.publication.year %}{{ pub_year_formatted }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}.{% endif %}
       </div>
       {% endif %}
     {%- endif -%}

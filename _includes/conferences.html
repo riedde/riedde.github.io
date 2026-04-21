@@ -124,16 +124,7 @@
         {%- endif -%}
 
         <div class="conference-citation">
-          {% if conference.link %}
-            <a href="{{ conference.link }}" target="_blank" class="conference-title">{{ conference.name | strip }}</a>
-          {% else %}
-            <span class="conference-title">{{ conference.name | strip }}</span>
-          {% endif %}{% if rest != "" %}, {{ rest }}{% endif %}
-          {% if conference.details %}
-        <span class="conference" style="font-style: oblique;">
-          {{ conference.details }}
-        </span>
-        {% else %}
+          {% if conference.link %}<a href="{{ conference.link }}" target="_blank" class="conference-title">{{ conference.name | strip }}</a>{% else %}<span class="conference-title">{{ conference.name | strip }}</span>{% endif %}{% if rest != "" %}, {{ rest }}{% endif %}{% if conference.details %}<span class="conference" style="font-style: oblique;">{{ conference.details }}</span>{% else %}
         <div class="conference" style="font-style: oblique;">&nbsp;</div>
         {% endif %}
         </div>
@@ -141,18 +132,7 @@
 
         {% if conference.type or conference.tags %}
         <div class="publication-type">
-          {% if conference.type %}
-            {% assign types = conference.type | join: "," | split: "," %}
-            {% for t in types %}
-              <span class="badge badge-secondary">{{ t | strip }}</span>
-            {% endfor %}
-          {% endif %}
-          {% if conference.tags %}
-            {% assign tags = conference.tags | join: "," | split: "," %}
-            {% for tag in tags %}
-              <span class="badge badge-secondary">{{ tag | strip }}</span>
-            {% endfor %}
-          {% endif %}
+          {% if conference.type %}{% assign types = conference.type | join: "," | split: "," %}{% for t in types %}<span class="badge badge-secondary">{{ t | strip }}</span>{% endfor %}{% endif %}{% if conference.tags %}{% assign tags = conference.tags | join: "," | split: "," %}{% for tag in tags %}<span class="badge badge-secondary">{{ tag | strip }}</span>{% endfor %}{% endif %}
         </div>
         {% endif %}
       </div>
