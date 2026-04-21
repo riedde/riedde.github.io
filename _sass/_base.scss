@@ -1,7 +1,6 @@
-@use "sass:color";
-@use "index" as *; // provide mixins and utilities via module
+@import "mixins";
 
-// configurable defaults (overridable via `@use "base" with (...)`)
+// configurable defaults
 $theme-color: #5BB66F !default;
 $text-color: #3F4650 !default;
 $text-color-secondary: #545E6C !default;
@@ -35,10 +34,10 @@ h6 {
 }
 
 a {
-  color: color.adjust($theme-color, $lightness: -15%);
+  color: adjust-color($theme-color, $lightness: -15%);
   &:hover {
     text-decoration: underline;
-    color: color.adjust($theme-color, $lightness: -30%);
+    color: adjust-color($theme-color, $lightness: -30%);
   }
   &:focus {
     text-decoration: none;
@@ -180,7 +179,7 @@ a {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
-    color: color.adjust($theme-color, $lightness: -15%);
+    color: adjust-color($theme-color, $lightness: -15%);
     position: relative;
     margin-top: 0;
     margin-bottom: 20px;
@@ -236,7 +235,7 @@ a {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 5px;
-    color: color.adjust($theme-color, $lightness: -15%);
+    color: adjust-color($theme-color, $lightness: -15%);
   }
   .projects-section {
     .intro {
@@ -297,7 +296,7 @@ a {
   }
   .level-bar-inner {
     height: 12px;
-    background: color.adjust($theme-color, $lightness: 15%);
+    background: adjust-color($theme-color, $lightness: 15%);
   }
 }
 
@@ -330,7 +329,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background: color.adjust($theme-color, $lightness: -10%);
+    background: adjust-color($theme-color, $lightness: -10%);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -361,7 +360,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background: color.adjust($theme-color, $lightness: -10%);
+    background: adjust-color($theme-color, $lightness: -10%);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -393,7 +392,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background: color.adjust($theme-color, $lightness: -10%);
+    background: adjust-color($theme-color, $lightness: -10%);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -447,7 +446,7 @@ a {
       .badge {
         font-size: 11px;
         padding: 3px 8px;
-        background-color: color.adjust($theme-color, $lightness: 10%);
+        background-color: adjust-color($theme-color, $lightness: 10%);
         color: #fff;
         border-radius: 6px;
       }

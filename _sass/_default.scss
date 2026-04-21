@@ -7,10 +7,8 @@
  * Website: http://themes.3rdwavemedia.com/
 */
 
-@use "sass:color";
+@import "responsive";
+@import "utilities";
 
-@use "responsive" as responsive;
-@use "utilities" as utilities;
-
-@use "base" as base;
-@use "print" as print;
+@import "base";
+@import "print";
