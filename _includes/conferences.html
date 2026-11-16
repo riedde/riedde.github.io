@@ -16,145 +16,99 @@
   </div><!--//intro-->
   {% endif %}
 
-  {%- comment -%} Current date for comparison {%- endcomment -%}
+  {%- comment -%} Current date and year for comparison {%- endcomment -%}
   {% assign today = "now" | date: "%Y-%m-%d" %}
-  {% assign future_count = 0 %}
-  {% assign past_count = 0 %}
+  {% assign current_year = "now" | date: "%Y" %}
   
-  {%- comment -%} First pass: count future and past events based on hide-after date {%- endcomment -%}
-  {%- comment -%} sort by `time-start` (newest first). Entries without `time-start` will be positioned by the sort behavior. {%- endcomment -%}
+  {%- comment -%} Count events by category {%- endcomment -%}
+  {% assign future_count = 0 %}
+  {% assign current_year_past_count = 0 %}
+  {% assign older_count = 0 %}
+  
+  {%- comment -%} Sort by time-start (newest first) {%- endcomment -%}
   {% assign sorted_events = conferences.events | sort: 'time-start' | reverse %}
+  
   {% for conference in sorted_events %}
     {% if conference["hide-after"] %}
       {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
+      {% assign hide_year = conference["hide-after"] | date: "%Y" %}
       {% if hide_date >= today %}
         {% assign future_count = future_count | plus: 1 %}
+      {% elsif hide_year == current_year %}
+        {% assign current_year_past_count = current_year_past_count | plus: 1 %}
       {% else %}
-        {% assign past_count = past_count | plus: 1 %}
+        {% assign older_count = older_count | plus: 1 %}
       {% endif %}
     {% else %}
-      {%- comment -%} If no hide-after date, treat as future event {%- endcomment -%}
       {% assign future_count = future_count | plus: 1 %}
     {% endif %}
   {% endfor %}
 
+  {%- comment -%} Display future events {%- endcomment -%}
   {% for conference in sorted_events %}
-    {%- comment -%} Show future events always, hide past events with conference-hidden class {%- endcomment -%}
+    {% assign is_past = false %}
+    {% assign is_older = false %}
+    {% if conference["hide-after"] %}
+      {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
+      {% assign hide_year = conference["hide-after"] | date: "%Y" %}
+      {% if hide_date < today %}
+        {% if hide_year == current_year %}
+          {% assign is_past = true %}
+        {% else %}
+          {% assign is_older = true %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    
+    {% if is_past == false and is_older == false %}
+      {%- include conferences-item.html conference=conference -%}
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} Horizontal line separator if there are past or older events {%- endcomment -%}
+  {% if current_year_past_count > 0 or older_count > 0 %}
+  <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+  {% endif %}
+
+  {%- comment -%} Display events from current year (past) {%- endcomment -%}
+  {% for conference in sorted_events %}
     {% assign is_past = false %}
     {% if conference["hide-after"] %}
       {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
-      {% if hide_date < today %}
+      {% assign hide_year = conference["hide-after"] | date: "%Y" %}
+      {% if hide_date < today and hide_year == current_year %}
         {% assign is_past = true %}
       {% endif %}
     {% endif %}
-    <div class="item {% if is_past %}conference-hidden{% endif %}">
-      <div>
-        {%- comment -%} build date string into `date_str` {%- endcomment -%}
-        {% assign date_str = "" %}
-        {% if conference["time-start"] -%}
-          {% capture date_str %}
-            {% assign s = conference["time-start"] %}
-            {% assign e = conference["time-end"] %}
-
-            {% assign s_day = s | date: "%-d" %}
-            {% assign s_month_num = s | date: "%m" %}
-            {% case s_month_num %}
-              {% when "01" %}{% assign s_month = "Jan." %}
-              {% when "02" %}{% assign s_month = "Feb." %}
-              {% when "03" %}{% assign s_month = "Mär." %}
-              {% when "04" %}{% assign s_month = "Apr." %}
-              {% when "05" %}{% assign s_month = "Mai" %}
-              {% when "06" %}{% assign s_month = "Jun." %}
-              {% when "07" %}{% assign s_month = "Jul." %}
-              {% when "08" %}{% assign s_month = "Aug." %}
-              {% when "09" %}{% assign s_month = "Sep." %}
-              {% when "10" %}{% assign s_month = "Okt." %}
-              {% when "11" %}{% assign s_month = "Nov." %}
-              {% when "12" %}{% assign s_month = "Dez." %}
-            {% endcase %}
-
-            {% if e and e != s %}
-              {% assign e_day = e | date: "%-d" %}
-              {% assign e_month_num = e | date: "%m" %}
-              {% assign e_year = e | date: "%Y" %}
-              {% case e_month_num %}
-                {% when "01" %}{% assign e_month = "Jan." %}
-                {% when "02" %}{% assign e_month = "Feb." %}
-                {% when "03" %}{% assign e_month = "Mär." %}
-                {% when "04" %}{% assign e_month = "Apr." %}
-                {% when "05" %}{% assign e_month = "Mai" %}
-                {% when "06" %}{% assign e_month = "Jun." %}
-                {% when "07" %}{% assign e_month = "Jul." %}
-                {% when "08" %}{% assign e_month = "Aug." %}
-                {% when "09" %}{% assign e_month = "Sep." %}
-                {% when "10" %}{% assign e_month = "Okt." %}
-                {% when "11" %}{% assign e_month = "Nov." %}
-                {% when "12" %}{% assign e_month = "Dez." %}
-              {% endcase %}
-              {% assign s_year = s | date: "%Y" %}
-              {% if s_month_num == e_month_num and s_year == e_year %}
-                {{ s_day }}.–{{ e_day }}. {{ e_month }} {{ e_year }}
-              {% else %}
-                {{ s_day }}. {{ s_month }}–{{ e_day }}. {{ e_month }} {{ e_year }}
-              {% endif %}
-            {% else %}
-              {{ s_day }}. {{ s_month }} {{ s | date: "%Y" }}
-            {% endif %}
-          {% endcapture %}
-        {% endif %}
-
-        {%- comment -%} Build a single `rest` string with date/institution/place joined by ', ' to avoid stray spaces/commas {%- endcomment -%}
-        {%- assign rest = "" -%}
-        {%- if date_str -%}
-          {%- assign rest = date_str | strip -%}
-        {%- endif -%}
-        {%- if conference.institution -%}
-          {%- if rest != "" -%}
-            {%- assign rest = rest | append: ", " | append: conference.institution | strip -%}
-          {%- else -%}
-            {%- assign rest = conference.institution | strip -%}
-          {%- endif -%}
-        {%- endif -%}
-        {%- if conference.place -%}
-          {%- if rest != "" -%}
-            {%- assign rest = rest | append: ", " | append: conference.place | strip -%}
-          {%- else -%}
-            {%- assign rest = conference.place | strip -%}
-          {%- endif -%}
-        {%- endif -%}
-
-        <div class="conference-citation">
-          {% if conference.link %}<a href="{{ conference.link }}" target="_blank" class="conference-title">{{ conference.name | strip }}</a>{% else %}<span class="conference-title">{{ conference.name | strip }}</span>{% endif %}{% if rest != "" %}, {{ rest }}{% endif %}{% if conference.details %}<span class="conference" style="font-style: oblique;">{{ conference.details }}</span>{% else %}
-        <div class="conference" style="font-style: oblique;">&nbsp;</div>
-        {% endif %}
-        </div>
-        <!--//details-->
-
-        {% if conference.type or conference.tags %}
-        <div class="publication-type">
-          {% if conference.type %}{% assign types = conference.type | join: "," | split: "," %}{% for t in types %}<span class="badge badge-secondary">{{ t | strip }}</span>{% endfor %}{% endif %}{% if conference.tags %}{% assign tags = conference.tags | join: "," | split: "," %}{% for tag in tags %}<span class="badge badge-secondary">{{ tag | strip }}</span>{% endfor %}{% endif %}
-        </div>
-        {% endif %}
-      </div>
-    </div><!--//item-->
-  {% endfor %}
-
-  {%- comment -%} Fallback: if counting above missed something, scan events for any past hide-after {%- endcomment -%}
-  {% assign past_exists = false %}
-  {% for c in conferences.events %}
-    {% if c["hide-after"] %}
-      {% assign hide_date = c["hide-after"] | date: "%Y-%m-%d" %}
-      {% if hide_date < today %}
-        {% assign past_exists = true %}
-        {% break %}
-      {% endif %}
+    
+    {% if is_past %}
+      {%- include conferences-item.html conference=conference -%}
     {% endif %}
   {% endfor %}
 
-  {% if past_count > 0 or past_exists %}
+  {%- comment -%} Display older events with hidden class {%- endcomment -%}
+  {% for conference in sorted_events %}
+    {% assign is_older = false %}
+    {% if conference["hide-after"] %}
+      {% assign hide_date = conference["hide-after"] | date: "%Y-%m-%d" %}
+      {% assign hide_year = conference["hide-after"] | date: "%Y" %}
+      {% if hide_date < today and hide_year != current_year %}
+        {% assign is_older = true %}
+      {% endif %}
+    {% endif %}
+    
+    {% if is_older %}
+      <div class="item conference-hidden">
+        {%- include conferences-item.html conference=conference -%}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} Toggle button for older events {%- endcomment -%}
+  {% if older_count > 0 %}
   <div class="text-center" style="margin-top: 20px;">
     <button id="toggleConferences" class="extend-button">
-      <i class="fas fa-angle-down"></i> Vergangene anzeigen ({{ past_count }})
+      <i class="fas fa-angle-down"></i> Weitere ({{ older_count }})
     </button>
   </div>
   {% endif %}
