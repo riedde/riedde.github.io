@@ -67,7 +67,11 @@
 
   {%- comment -%} Horizontal line separator if there are past or older events {%- endcomment -%}
   {% if current_year_past_count > 0 or older_count > 0 %}
-  <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+  <div style="margin: 30px 0; display: flex; align-items: center; gap: 15px;">
+    <div style="flex: 1; height: 2px; background-color: #ddd;"></div>
+    <span style="font-size: 0.9em; color: #666; white-space: nowrap; font-weight: 500;">in {{ current_year }}</span>
+    <div style="flex: 1; height: 2px; background-color: #ddd;"></div>
+  </div>
   {% endif %}
 
   {%- comment -%} Display events from current year (past) {%- endcomment -%}
