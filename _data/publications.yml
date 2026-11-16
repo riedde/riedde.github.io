@@ -1,12 +1,34 @@
 title: Publikationen
 intro: |
-  Diese Liste ist aktuell nicht vollständig.
+  Diese Liste ist aktuell nicht vollständig. Ausgewählte Publikationen und Vorträge.
 papers:
+
+  - title: "Reuse and bidirectional further development of research software in a Digital Humanities project"
+    authors: "Dennis Ried"
+    publication:
+      title: "Electronic Communications of the European Association of Software Science and Technology (ECEASST)"
+      volume: 85
+      year: 2025
+    doi: "10.14279/eceasst.v85.2682"
+    type: article
+    status: published
+
+  - title: "Online-Portal und Digitale Edition – Ein Spannungsfeld?"
+    authors: "Dennis Ried"
+    publication:
+      title: "Edition als Vermittlung (Beihefte zu editio)"
+      volume: 59
+      editors: "Anke Bosse / Artur R. Boelderl"
+      year: 2026
+      place: "Berlin/Boston"
+    doi: "10.1515/9783112212059-008"
+    pages: "99-108"
+    type: article
 
   - title: "Forschungsdaten zwischen Tradition und Digitalität. Ein Spagat für die Händel-Forschung in Halle"
     authors: "Dennis Ried"
     publication:
-      year: 2025-10-07
+      year: 2025
     doi: 10.5281/zenodo.19597009
     type: poster
   
@@ -275,6 +297,46 @@ papers:
       place: Mainz
       conference: Internationaler Kongress der Gesellschaft für Musikforschung
     type: poster
+
+  - title: "Posterbeitrag zu BauDi Contentathon 2025"
+    authors: "Dennis Ried"
+    publication:
+      year: 2025
+    doi: "10.5281/zenodo.17249951"
+    type: poster
+
+  - title: "Community-Driven Open Source Development of Edirom Online 1.0 and Beyond"
+    authors: "Dennis Ried (Co-Autor)"
+    publication:
+      year: 2025
+    doi: "10.5281/zenodo.16811016"
+    type: poster
+
+  - title: "Five Aspects of ViFE"
+    authors: "Dennis Ried (Co-Autor)"
+    publication:
+      year: 2025
+    doi: "10.5281/zenodo.14893859"
+    type: poster
+
+  - title: "Conference Report. 'Handel's Italian Texts and his Librettists'"
+    authors: "Dennis Ried"
+    publication:
+      title: "Handel Institute Newsletter"
+      volume: 36
+      issue: 2
+      pages: "14–15"
+      year: 2025
+    type: article
+
+  - title: 'Round Table: „Händels italienische Texte"'
+    authors: "Dennis Ried"
+    publication:
+      title: "Händel-Jahrbuch"
+      volume: 70
+      pages: "387–390"
+      year: 2025
+    type: article
   
   - title: "Reger. Complete Works for Clarinet and Piano"
     authors: "Dennis Ried"
