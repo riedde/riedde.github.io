@@ -275,9 +275,9 @@ events:
   - name: "Gastvortrag im Kolloquium der Universität Augsburg"
     place: "Augsburg"
     institution: "Universität Augsburg"
-    time-start: "2024-12-01"
+    time-start: "2024-11-26"
     type: "Vortrag"
-    hide-after: "2024-12-02"
+    hide-after: "2024-11-27"
   
   - name: "Symposium der Internationalen Händel-Akademie"
     place: "Karlsruhe"
@@ -352,13 +352,6 @@ events:
     type: "Konferenz"
     hide-after: "2025-03-07"
   
-  - name: "Edition – Ein Portal in eine andere Welt?"
-    place: "Augsburg"
-    institution: "Universität Augsburg"
-    details: "Gastvortrag im Kolloquium der Musikwissenschaft"
-    type: "Vortrag"
-    hide-after: "2026-03-31"
-  
   - name: "„Musik in einer geteilten Welt“, 77. Jahrestagung der Gesellschaft für Musikforschung"
     place: "Weimar"
     institution: "Hochschule für Musik Franz Liszt Weimar"
@@ -371,14 +364,17 @@ events:
     place: "Halle (Saale)"
     institution: "Martin-Luther-Universität Halle-Wittenberg"
     details: "Bewerbungsvortrag für die Akademie-Juniorprofessur mit SchwerpunktMusikedition und Digital Humanities"
+    time-start: "2024-02-01"
     type: "Vortrag"
-    hide-after: 2026-03-31
+    hide-after: "2024-02-02"
   
   - name: "„Edition als Transformation“. Plenartagung der Arbeitsgemeinschaft germansitische Edition"
     place: "Wuppertal"
     institution: "Bergische Universität"
+    time-start: "2024-02-21"
+    time-end: "2024-02-24"
     type: "Konferenz"
-    hide-after: 2026-03-31
+    hide-after: "2024-02-25"
   
   - name: "1. Harsh-Vocal-Camp"
     place: "Hannover"
@@ -448,14 +444,13 @@ events:
     time-end: "2021-09-17"
     type: "Konferenz"
     hide-after: "2021-09-17"
-  
   - name: "Karajan Music Tech Conference"
     place: "online"
     institution: "Eliette und Herbert von Karajan Institut Salzburg"
     time-start: "2020-04-03"
     type: "Konferenz"
-    hide-after: 2026-03-31
-  
+    hide-after: "2020-04-04"
+ 
   - name: "Music-Encoding-Conference"
     place: "online"
     institution: "Tufts University Boston"
@@ -513,11 +508,6 @@ events:
     details: "Creating, transforming and representing data at Baumann-Digital and Joachim-Raff-Archiv"
     hide-after: "2019-06-01"
   
-  - name: "Digitale Erschließung der „Mitteilungen der Internationalen Max Reger Gesellschaft (IMRG)“"
-    time-start: "2020"
-    time-end: "2021"
-    hide-after: "2021"
-  
   - name: "Jahrestagung der Gesellschaft für Musikforschung"
     place: "Berlin"
     institution: "Humbold-Universität zu Berlin"
@@ -534,32 +524,12 @@ events:
     details: "Daten, Daten, Daten -- Händische Listen vs. automatisierte Register"
     hide-after: "2019-09-06"
   
-  - name: "Kalliwoda-Tagung"
-    place: "Donaueschingen"
-    time-start: "2019"
-    details: "Digitale Edition von Werken Kalliwodas und der Versuch der Integration in das Onlineangebot der Badischen Landesbibliothek"
-    hide-after: 2026-03-31
-  
-  - name: "Online-Portal des Joachim-Raff-Archivs (JRA)"
-    time-start: "2018"
-    hide-after: 2026-03-31
-  
-  - name: "Workshop der Task Area 2 (Datenstandards, Qualität und Kuratierung)"
-    place: "online"
-    institution: "NFDI4Culture"
-    hide-after: 2026-03-31
-  
   - name: "Working Meeting on the topic of MEI Metadata"
     place: "online"
     institution: "Music Encoding Initiative – Metadata interest group"
     time-start: "2020-11-02"
     time-end: "2020-11-04"
     hide-after: "2020-11-04"
-  
-  - name: "Baumann-Digital – als promotionsbegleitendes Projekt ( BauDi )"
-    time-start: "2017"
-    time-end: "2024"
-    hide-after: "2024"
   
   - name: "Winter school: Digitale Editionen – Interface Design"
     place: "Wuppertal"
@@ -568,20 +538,6 @@ events:
     time-end: "2022-04-25"
     hide-after: "2022-04-25"
   
-  - name: "„Henze-Digital“ – Hans Werner Henzes künstlerisches Netzwerk"
-    time-start: "2021"
-    time-end: "2024"
-    hide-after: "2024"
-  
-  - name: "Edirom Online – Software für Musikeditonen | Entwicklung"
-    time-start: "2021"
-    hide-after: 2026-03-31
-  
-  - name: "Das Konzept Datenmanagementplan"
-    place: "online"
-    institution: "DINI/nestor AG Forschungsdaten/fdm.nrw"
-    hide-after: 2026-03-31
-  
   - name: "14. Edirom-Summer-School"
     place: "Paderborn"
     institution: "Universität Paderborn"
@@ -589,16 +545,12 @@ events:
     time-end: "2023-06-02"
     hide-after: "2023-06-02"
   
-  - name: "Edirom-Summer-School – Tagungsorganisation"
-    time-start: "2022"
-    hide-after: 2026-03-31
-  
   - name: "eXist-bootcamp: xQuery + eXist-db for Humanists"
     place: "online"
     institution: "Université Lumière Lyon 2"
-    time-start: "2020-11"
-    time-end: "2021-04"
-    hide-after: "2021-04"
+    time-start: "2020-06-15"
+    time-end: "2020-06-19"
+    hide-after: "2020-06-20"
   
   - name: "Materiality in editions of 20th-century paperbound correspondence"
     place: "Paderborn"
@@ -608,13 +560,6 @@ events:
     details: "JOINT MEC and TEI Conference"
     type: ["Panel", "Konferenz"]
     hide-after: "2023-09-08"
-  
-  - name: ",Digital Winter School‘ 2021: „A FAIRground“. Forschungsdatenmanagement"
-    place: "online"
-    institution: "Universitätsbibliothek Hildesheim"
-    time-start: "2021-02-17"
-    type: "Workshop"
-    hide-after: 2026-03-31
   
   - name: "Tagung der Arbeitsgemeinschaft für germanistische Edition"
     place: "Marbach am Neckar"
@@ -657,24 +602,19 @@ events:
   - name: "Impulsreferat: „Zum Verhältnis von Digitalisat und Transkription“"
     place: "Wien"
     institution: "Arnold Schönberg Center"
-    details: "Studientag „Briefeditionen vernetzen Musi- ker:innenbriefe digital | hybrid“"
+    details: "Studientag „Briefeditionen vernetzen Musiker:innenbriefe digital | hybrid“"
     time-start: "2024-01-17"
     type: "Vortrag"
-    hide-after: "2026-03-31"
+    hide-after: "2024-01-18"
   
   - name: "MEI-Developer Workshop"
     place: "Berlin"
     institution: "Enote GmbH"
-    time-start: "2022-10"
+    time-start: "2022-10-01"
+    time-end: "2022-10-03"
     type: "Workshop"
-    hide-after: "2022-11"
+    hide-after: "2022-10-04"
   
-  - name: "MEI-Developer Workshop"
-    place: "Wien"
-    institution: "Universität für Musik und darstellende Kunst"
-    time-start: "2024-01"
-    type: "Workshop"
-    hide-after: 2026-03-31
   
   - name: "„Quo vadis“. Jahrestagung der Digital Humanities im deutschsprachigen Raum"
     place: "Passau"
