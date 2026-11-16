@@ -12,7 +12,7 @@ papers:
       year: 2026
       place: "Berlin/Boston"
     doi: "10.1515/9783112212059-008"
-    pages: "99-108"
+    pages: "99-107"
     type: article
 
   - title: "[Chapter] 3 Metadata in MEI"
@@ -62,6 +62,7 @@ papers:
       title: "Musik, Netzwerke, Selbstzeugnisse. Aktuelle Forschung zu Hans Werner Henze"
       editors: "Antje Tumat / Elena Minetti / Dennis Ried / Irmlind Capelle"
       year: 2025
+      pages: 1-22
     doi: "10.25366/2025.157"
     type: article
 
@@ -69,6 +70,7 @@ papers:
     editors: "Antje Tumat / Elena Minetti / Dennis Ried / Irmlind Capelle"
     publication:
       year: 2025
+      pages: 1-22
     doi: "10.25366/2025.156"
     type: book
 
@@ -79,6 +81,7 @@ papers:
       editors: "Ulrike Harnisch / Annette Landgraf / Tomi Mäkelä / Ute Poetzsch / Teresa Ramer-Wünsche"
       place: Kassel
       year: 2025
+      pages: 341-348
     type: article
 
   - title: "Posterbeitrag zu BauDi Contentathon 2025"

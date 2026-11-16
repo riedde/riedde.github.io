@@ -212,7 +212,7 @@ events:
     institution: "Karlsruher Institut für Technologie (KIT)"
     time-start: "2025-02-25"
     time-end: "2025-02-27"
-    details: "Beitrag zu Software-Nachnutzung"
+    details: "Beitrag: „Reuse and bidirectional further development of research software in a Digital Humanities project“"
     type: "Konferenz"
     hide-after: "2025-02-28"
 
