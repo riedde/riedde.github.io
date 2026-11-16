@@ -1,7 +1,23 @@
 title: Publikationen
 intro: |
-  Diese Liste ist aktuell nicht vollständig. Ausgewählte Publikationen und Vorträge.
+  Vollstänige Publikationsliste.
 papers:
+
+  - title: "»halb und halb« – Hybride Edition als Kompromiss? Eine Studie zu Methodik, Möglichkeiten und Grenzen in der hybriden Musikedition am Beispiel der Edition von Ludwig Baumanns »Kantate. Den Gefallenen zum Gedächtnis, den Trauernden zum Trost«"
+    authors: "Dennis Ried"
+    publication:
+      title: "Dissertationsschrift"
+      year: 2024
+      place: "Berlin"
+    type: book
+
+  - title: "»Welch ein Geschwätz«. Robert Walsers »Jakob von Gunten«"
+    authors: "Dennis Ried"
+    publication:
+      year: 2014
+      place: "München"
+      publisher: "Grin Verlag"
+    type: article
 
   - title: "Reuse and bidirectional further development of research software in a Digital Humanities project"
     authors: "Dennis Ried"
@@ -11,7 +27,6 @@ papers:
       year: 2025
     doi: "10.14279/eceasst.v85.2682"
     type: article
-    status: published
 
   - title: "Online-Portal und Digitale Edition – Ein Spannungsfeld?"
     authors: "Dennis Ried"
@@ -238,6 +253,36 @@ papers:
       conference: Jahrestagung der Gesellschaft für Musikforschung
     type: poster
   
+  - title: "Max Reger: Lieder II"
+    editors: "Stefan König / Dennis Ried"
+    publication:
+      title: "Max Reger Werkausgabe. Wissenschaftlich-kritische Hybrid-Edition von Werken und Quellen"
+      editors: "Susanne Popp / Thomas Seedorf"
+      volume: "II/2"
+      place: Stuttgart
+      year: 2021
+    type: in-book
+
+  - title: "Max Reger: Werke für gemischten Chor a cappella II"
+    editors: "Christopher Grafschmidt unter Mitarbeit von Stefan König und Dennis Ried"
+    publication:
+      title: "Max Reger Werkausgabe. Wissenschaftlich-kritische Hybrid-Edition von Werken und Quellen"
+      editors: "Susanne Popp / Thomas Seedorf"
+      volume: "II/9"
+      place: Stuttgart
+      year: 2021
+    type: in-book
+
+  - title: "Max Reger: Vokalmusik mit Orgelbegleitung und weiteren Instrumenten"
+    editors: "Alexander Becker / Christopher Grafschmidt / Stefan König unter Mitarbeit von Dennis Ried"
+    publication:
+      title: "Max Reger Werkausgabe. Wissenschaftlich-kritische Hybrid-Edition von Werken und Quellen"
+      editors: "Susanne Popp / Thomas Seedorf"
+      volume: "II/7"
+      place: Stuttgart
+      year: 2019
+    type: in-book
+
   - title: "»Ein gar kräftigliches, nie versiegendes Heilmittel« – Max Regers Klavierbearbeitungen Bach'scher Orgelwerke"
     authors: "Dennis Ried / Christopher Grafschmidt"
     publication:
@@ -337,6 +382,146 @@ papers:
       pages: "387–390"
       year: 2025
     type: article
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v6.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2024
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v6.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.13381135"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13381135"
+      - title: "HenDi-ODD v6.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.13381127"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13381127"
+      - title: "HenDi-Data (data package) v6.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.13381134"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13381134"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v5.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2024
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v5.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.13137427"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13137427"
+      - title: "HenDi-ODD v5.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.13137422"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13137422"
+      - title: "HenDi-Data (data package) v5.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.13137419"
+        link: "https://zenodo.org/doi/10.5281/zenodo.13137419"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v4.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2024
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v4.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.11070035"
+        link: "https://zenodo.org/doi/10.5281/zenodo.11070035"
+      - title: "HenDi-ODD v4.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.11069991"
+        link: "https://zenodo.org/doi/10.5281/zenodo.11069991"
+      - title: "HenDi-Data (data package) v4.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.11067989"
+        link: "https://zenodo.org/doi/10.5281/zenodo.11067989"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v3.1.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2024
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v3.1.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.10839555"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10839555"
+      - title: "HenDi-ODD v3.1.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10839530"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10839530"
+      - title: "HenDi-Data (data package) v3.1.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10839525"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10839525"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v3.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2024
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v3.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.10666436"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10666436"
+      - title: "HenDi-ODD v3.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10666406"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10666406"
+      - title: "HenDi-Data (data package) v3.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10666370"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10666370"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v2.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2023
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v2.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.10390049"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10390049"
+      - title: "HenDi-ODD v2.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10391194"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10391194"
+      - title: "HenDi-Data (data package) v2.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.10391419"
+        link: "https://zenodo.org/doi/10.5281/zenodo.10391419"
+
+  - title: "Hans Werner Henzes künstlerisches Netzwerk (Henze-Digital) v1.0.0"
+    editors: "Irmlind Capelle / Elena Minetti / Dennis Ried / Antje Tumat"
+    publication:
+      year: 2023
+    link: "https://henze-digital.zenmem.de"
+    type: edition
+    components:
+      - title: "HenDi-WebApp v1.0.0"
+        authors: "Dennis Ried"
+        doi: "10.5281/zenodo.8304639"
+        link: "https://zenodo.org/doi/10.5281/zenodo.8304639"
+      - title: "HenDi-ODD v1.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.8304804"
+        link: "https://zenodo.org/doi/10.5281/zenodo.8304804"
+      - title: "HenDi-Data (data package) v1.0.0"
+        editors: "Irmlind Capelle / Elena Minetti / Dennis Ried"
+        doi: "10.5281/zenodo.8304688"
+        link: "https://zenodo.org/doi/10.5281/zenodo.8304688"
   
   - title: "Reger. Complete Works for Clarinet and Piano"
     authors: "Dennis Ried"

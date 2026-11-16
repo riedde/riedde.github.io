@@ -75,8 +75,8 @@
     
     {%- else -%}
       {%- comment -%} Default format for other types {%- endcomment -%}
-      {% if publication.link %}<li><a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a></li>{% else %}<li>{{ publication.title }}</li>{% endif %}
-      <div class="publication-authors">{{ publication.authors }}</div>{% if publication.publication %}
+      <div class="publication-title-wrapper">{% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}</div>
+      <div class="publication-authors">{{ publication.authors }}{% if publication.editors %}{{ publication.editors }}{% endif %}</div>{% if publication.publication %}
       <div class="publication-details">
         {% if publication.publication.title %}<em>{{ publication.publication.title }}</em>{% if publication.publication.editors %}, hrsg. von {{ publication.publication.editors }}{% endif %}{% if publication.publication.issue %}, Nr. {{ publication.publication.issue }}{% endif %}{% if publication.publication.pages %}, S. {{ publication.publication.pages }}{% endif %}{% if publication.publication.year %} ({{ pub_year_formatted }}){% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.publisher %}: {{ publication.publication.publisher }}{% endif %}.
         {% elsif publication.publication.publisher %}{{ publication.publication.publisher }}{% if publication.publication.place %}, {{ publication.publication.place }}{% endif %}{% if publication.publication.year %} ({{ pub_year_formatted }}){% endif %}.
@@ -85,8 +85,29 @@
       {% endif %}
     {%- endif -%}
     
+    {%- comment -%} Render components if they exist {%- endcomment -%}
+    {% if publication.components %}
+    <div style="margin-top: 10px; margin-left: 20px; border-left: 3px solid #ddd; padding-left: 15px;">
+      {% for component in publication.components %}
+      <div style="margin-bottom: 8px; font-size: 0.95em;">
+        {% if component.authors %}<span style="font-weight: 500;">{{ component.authors }}:</span>{% endif %}
+        {% if component.editors %}<span style="font-weight: 500;">{{ component.editors }}:</span>{% endif %}
+        {% if component.link %}<a href="{{ component.link }}" target="_blank">{{ component.title }}</a>{% else %}{{ component.title }}{% endif %}
+        {% if component.doi %} <span style="font-size: 0.9em; color: #666;">DOI: <a href="https://doi.org/{{ component.doi }}" target="_blank">{{ component.doi }}</a></span>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
     {% if publication.type %}
-    <div class="publication-type"><span class="badge badge-secondary">{{ publication.type }}</span></div>
+    <div class="publication-type">
+      <span class="badge badge-secondary">{{ publication.type }}</span>
+      {% if publication.status == 'upcoming' %}<span class="badge badge-warning">in Vorbereitung</span>{% endif %}
+    </div>
+    {% elsif publication.status == 'upcoming' %}
+    <div class="publication-type">
+      <span class="badge badge-warning">in Vorbereitung</span>
+    </div>
     {% endif %}
   </div><!--//item-->
   {% endfor %}
