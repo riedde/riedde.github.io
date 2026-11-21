@@ -70,7 +70,7 @@
     {%- elsif publication.type == 'poster' or publication.type == 'presentation' -%}
       {%- comment -%} Format: {Authors}: {title}, {conference}, {place} {year} {%- endcomment -%}
       <div class="publication-citation">
-        <span class="publication-authors">{{ publication.authors }}</span>: {% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.conference %}, {{ publication.publication.conference }}{% endif %}{% if publication.publication.place %},{{ publication.publication.place }} {% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}
+        <span class="publication-authors">{{ publication.authors }}</span>: {% if publication.link %}<a href="{{ publication.link }}" target="_blank" class="publication-title">{{ publication.title }}</a>{% else %}<span class="publication-title">{{ publication.title }}</span>{% endif %}{% if publication.publication.conference %}, {{ publication.publication.conference }}{% endif %}{% if publication.publication.place %}, {{ publication.publication.place }}{% elsif publication.publication.year %},{% endif %}{% if publication.publication.year %} {{ pub_year_formatted }}{% endif %}{% if publication.doi %}, DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a>{% endif %}
       </div>
     
     {%- else -%}
@@ -92,8 +92,7 @@
       <div style="margin-bottom: 8px; font-size: 0.95em;">
         {% if component.authors %}<span style="font-weight: 500;">{{ component.authors }}:</span>{% endif %}
         {% if component.editors %}<span style="font-weight: 500;">{{ component.editors }}:</span>{% endif %}
-        {% if component.link %}<a href="{{ component.link }}" target="_blank">{{ component.title }}</a>{% else %}{{ component.title }}{% endif %}
-        {% if component.doi %} <span style="font-size: 0.9em; color: #666;">DOI: <a href="https://doi.org/{{ component.doi }}" target="_blank">{{ component.doi }}</a></span>{% endif %}
+        {% if component.link %}<a href="{{ component.link }}" target="_blank">{{ component.title }}</a>{% else %}{{ component.title }}{% endif %}{% if component.doi %}, <span style="font-size: 0.9em; color: #666;">DOI: <a href="https://doi.org/{{ component.doi }}" target="_blank">{{ component.doi }}</a></span>{% endif %}
       </div>
       {% endfor %}
     </div>
