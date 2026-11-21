@@ -203,7 +203,7 @@ events:
     institution: "Technische Universität Darmstadt"
     time-start: "2025-02-20"
     time-end: "2025-02-21"
-    details: "Mit Beteiligung von Stefan Dumont (BBAW), Martina Scholger/Elisabeth Steiner (Graz), Thomas Kollatz (AdW Mainz), Thomas Stäcker (TU Darmstadt), Martin Prell (Klassikstiftung Weimar), Elisabeth Décultot/Baptiste Baumann (MLU)"
+    comment: "Mit Beteiligung von Stefan Dumont (BBAW), Martina Scholger/Elisabeth Steiner (Graz), Thomas Kollatz (AdW Mainz), Thomas Stäcker (TU Darmstadt), Martin Prell (Klassikstiftung Weimar), Elisabeth Décultot/Baptiste Baumann (MLU)"
     type: "Workshop"
     hide-after: "2025-02-22"
   
@@ -330,7 +330,7 @@ events:
     place: "Halle(Saale)"
     time-start: "2025-05-10"
     time-end: "2025-05-12"
-    details: "Aktive Teilnahme am Roundtable (Diskutant)"
+    details: "Diskutant im Roundtable"
     type: "Roundtable"
     hide-after: "2025-05-13"
   
@@ -338,7 +338,7 @@ events:
     place: "Halle(Saale)"
     institution: "Martin-Luther-Universität Halle-Wittenberg"
     time-start: "2025-12-03"
-    details: "Eine codierte Welt. Zwischen Fachtradition(en) und Digital Humanities"
+    details: "Titel: Eine codierte Welt. Zwischen Fachtradition(en) und Digital Humanities"
     type: "Antrittsvorlesung"
     hide-after: "2025-12-04"
   
@@ -356,7 +356,7 @@ events:
     institution: "Martin-Luther-Universität Halle-Wittenberg"
     time-start: "2025-06-10"
     time-end: "2025-06-12"
-    details: "Diskutant: Händels italienische Texte – Möglichkeiten und Grenzen einer digitalen Edition"
+    details: "Diskutantbeim Roundtable: Händels italienische Texte – Möglichkeiten und Grenzen einer digitalen Edition"
     type: "Podiumsdiskussion"
     hide-after: "2025-06-12"
   
@@ -429,7 +429,7 @@ events:
     institution: "Universität des Saarlandes"
     time-start: "2023-10-04"
     time-end: "2023-10-07"
-    details: "Jahrestagung der Gesellschaft für Musikforschung"
+    details: "Vortrag zur Jahrestagung der Gesellschaft für Musikforschung"
     type: "Vortrag"
     hide-after: "2023-10-07"
   
