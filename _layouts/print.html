@@ -16,6 +16,23 @@
     .wrapper {
       max-width: unset !important;
     }
+    /* Compact two-column skill bars for print/PDF */
+    .skills-section .skillset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+    .skills-section .skillset .item {
+      margin-bottom: 10px;
+    }
+    .skills-section .skillset .level-title,
+    .skills-section .skillset .level-bar {
+      float: none;
+      width: 100%;
+    }
+    .skills-section .skillset .level-title {
+      margin-bottom: 4px;
+    }
   </style>
   <body>
     <div class="wrapper">

@@ -44,14 +44,19 @@ $heart: #fb866a !default;
     display: none;
   }
 
-  .skillset,
+  .skillset .item,
   .container-block {
     break-inside: avoid;
   }
 
+  .skillset .level-bar,
+  .skillset .level-bar-inner {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .skillset .level-bar-inner {
     background-color: $theme-color !important;
-    -webkit-print-color-adjust: exact;
   }
 
    .fa-inverse,
